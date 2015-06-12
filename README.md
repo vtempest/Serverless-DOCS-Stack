@@ -12,8 +12,10 @@ Jquery & Bootstrap interface
 ###Setup
 
 
-```npm install
-mv ./node_modules/mongo-express/config.sample.json ./node_modules/mongo-express/config.json```
+```
+npm install
+mv ./node_modules/mongo-express/config.sample.json ./node_modules/mongo-express/config.json
+```
 
 Run each in three separate screens:
 ```
