@@ -1,16 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var model = require('./models.js');
-
 mongoose.connect('mongodb://localhost/test');
 
 
+var model = require('./models.js');
 var Thread = model.Thread;
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.sendFile('index', { title: 'Express' });
+  res.render('index', { title: 'Express' });
 });
 
 router.get('/create', function(req, res) {
