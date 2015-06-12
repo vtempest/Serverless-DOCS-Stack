@@ -2,11 +2,11 @@
 
 Minimalist nodejs webapp with tools you'll need in your projects:
 
-express server
-mongoose for mongodb
-mongo-express for db admin
-ejs templating
-Jquery & Bootstrap interface
+- express server
+- mongoose for mongodb
+- mongo-express for db admin
+- ejs templating
+- Jquery & Bootstrap interface
 
 
 ###Setup
