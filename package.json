@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "start": "node app.js",
-    "forever": "forever start app.js"
+    "forever": "forever start app.js",
+    "mongo": "mongod --dbpath=db --smallfiles --nojournal",
+    "admin": "node .\\node_modules\\mongo-express\\app.js"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
@@ -11,7 +13,10 @@
     "debug": "~2.2.0",
     "ejs": "^2.3.1",
     "express": "~4.12.4",
+    "forever": "^0.14.1",
     "mongo-express": "^0.21.0",
-    "morgan": "~1.5.3"
+    "mongoose": "^4.0.5",
+    "morgan": "~1.5.3",
+    "serve-favicon": "^2.2.1"
   }
 }
