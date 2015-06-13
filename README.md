@@ -27,7 +27,7 @@ npm start
 
 
 If it's the first time ever using this server, run this first:
-```sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install  nodejs npm mongodb screen openssh build-essential python git```
+```sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm mongodb screen openssh build-essential python git```
 
 
 ## .bashrc
