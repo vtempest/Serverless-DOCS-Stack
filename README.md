@@ -1,9 +1,9 @@
 ##Nodejs Starter
 
-Minimalist nodejs webapp with tools you'll need:
+Sample nodejs webapp with tools you'll need:
 
-- express server with minimal files 
-- mongoose for mongodb &mongo-express for db admin
+- Nodejs express server with minimal files 
+- mongoose for mongodb & mongo-express for db-admin
 - ejs templating & Jquery & Bootstrap interface
 - Google user authentication with passport
 
