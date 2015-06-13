@@ -33,16 +33,27 @@ First time login setup
 
 ###SSH Setup
 ```ssh -i /path/to/your/Awskey.pem ubuntu@##.##.##.##```
+
 ```sudo adduser alex```
+
 Set a password
+
 ```sudo visudo```
+
 Add this line
+
 ```alex ALL=NOPASSWD:ALL```
+
 Beneath the root ALL=(ALL):ALL line, and ctrl x to exit and enter y to save
+
 ```sudo nano /etc/ssh/sshd_config```
+
 Find this line and modify it to say yes:  PasswordAuthentication yes 
+
 Then exit and save with ctrl+x and press y to save
+
 ```sudo service ssh restart```` 
+
 Now you can login as ssh alex@##.##.##.##.##
 
 ### Open ports
