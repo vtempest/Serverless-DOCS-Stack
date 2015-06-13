@@ -56,7 +56,11 @@ git push -u -f origin master
 
 
 ### AWS SSH Setup
-```ssh -i /path/to/your/Awskey.pem ubuntu@##.##.##.##```
+
+Create a free-tier ubuntu server, download key, and login from your computer:
+```ssh -i /path/to/your/Awskey.pem ubuntu@##.##.##.##``` 
+
+
 ```sudo adduser alex```
 Set a password
 
@@ -80,3 +84,20 @@ In the AWS EC2 Instance console, make sure the security group assigned to your i
 Go to your ec2 manager and click elastic IPs on the sidebar, Allocate a new address, then associate address and select your running instance to be associated with that address. Test it out by typing that ip address into your url box, index.html should show up.
 Now go to Route 53 under the aws console dropdown and click Create Hosted Zone, name it your site's name .com, then go to record sets, create record set Type: A with the Value of the Elastic IP you got before.
 Now copy the Name Server values, which look like ns-1877.awsdns-42.co.uk. ns-1149.awsdns-15.org. ns-923.awsdns-51.net. ns-216.awsdns-27.com.
+
+
+### Programs
+[Sublime](http://www.sublimetext.com/3)
+[Sublime packages](https://packagecontrol.io/installation)
+[Atom](https://atom.io/)
+
+Windows programs:
+[WinSCP](http://winscp.net/eng/download.php#download2)
+[Putty SSH](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe)
+[Cygwin](https://cygwin.com/setup-x86.exe)
+[Github](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
+[Rapid Environment Editor](http://www.rapidee.com/download/RapidEE_setup.exe)
+
+For npm install to work on Windows, you'll need:
+[VS2010](https://app.vssps.visualstudio.com/profile/review?download=true&family=VisualStudioCExpress&release=VisualStudio2010&type=web&slcid=0x409)
+[Python2.7](https://www.python.org/downloads/)
