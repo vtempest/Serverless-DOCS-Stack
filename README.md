@@ -2,10 +2,10 @@
 
 Sample nodejs webapp with tools you'll need:
 
-- Nodejs express server with minimal files 
-- mongoose for mongodb & mongo-express for db-admin
-- ejs templating & Jquery & Bootstrap interface
-- Google user authentication with passport
+- Nodejs [express](http://expressjs.com/4x/api.html) server with minimal files 
+- [mongoose](http://mongoosejs.com/docs/guide.html) for mongodb & mongo-express for db-admin
+- [EJS](https://github.com/mde/ejs) templating & [Jquery](https://learn.jquery.com/using-jquery-core/) & [Bootstrap](http://getbootstrap.com/components/) interface
+- Google login with [passport](http://passportjs.org/docs/overview)
 
 
 ###Setup
