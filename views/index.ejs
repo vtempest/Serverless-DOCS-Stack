@@ -1,4 +1,13 @@
 <% include head %>
-<title><%= title %></title>
+<title>Home</title>
 </head><body>
-<%= title %>
+
+<% if (!user) { %>
+	<h2>Welcome! Please log in.</h2>
+
+<a href="/auth/google">Sign In</a>
+
+<% } else { %>
+	<h2>Hello, <%= user.displayName %>.</h2>
+<% } %>
+
