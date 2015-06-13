@@ -25,8 +25,7 @@ npm run mongo
 npm start
 ```
 
-
-##New Server Setup
+First time server setup:
 ```sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install  nodejs npm mongodb screen openssh build-essential python git```
 
 
