@@ -32,9 +32,7 @@ npm start
 
 ## .bashrc
 
-Install useful .bashrc shortcuts are: ```u``` to check updates, ```l``` detailed file list, ```..``` parent dir, ```i <appname>``` install package
-If you've just booted your ec2 server, you will need to first update packages before you can use them
-
+Install useful .bashrc shortcuts: ```u``` to check updates, ```l``` detailed file list, ```..``` parent dir, ```i <appname>``` install package
 ```echo "alias u='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y'" >> ~/.bashrc &&  echo "alias l='ls -la'" >> ~/.bashrc && echo "alias ..='cd ..'" >> ~/.bashrc && echo "alias i='sudo apt-get install'" >> ~/.bashrc && source ~/.bashrc```
 
 when you login, if you want the default directory to always be your site then edit this with the path:
