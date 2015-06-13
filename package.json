@@ -2,9 +2,8 @@
   "name": "nodejs-starter",
   "version": "0.0.0",
   "scripts": {
-    "start": "node app.js",
-    "forever": "clear && sudo forever --minUptime=1000 --spinSleepTime=1000 -w app.js ",
-    "mongo": "sudo service mongodb stop && mkdir db && mongod --dbpath=db --smallfiles --nojournal",
+    "start": "clear && sudo forever --minUptime=10 --spinSleepTime=2000 -v -w app.js ",
+    "mongo": "sudo service mongodb stop && mkdir db && sudo mongod --dbpath=db --smallfiles --nojournal",
     "admin": "sudo node .\\node_modules\\mongo-express\\app.js"
   },
   "dependencies": {
@@ -18,7 +17,6 @@
     "mongo-express": "^0.21.0",
     "mongoose": "^4.0.5",
     "passport": "^0.2.2",
-    "passport-google-oauth": "^0.2.0",
     "passport-google-oauth2": "^0.1.6"
   }
 }

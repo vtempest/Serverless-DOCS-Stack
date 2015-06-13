@@ -1,20 +1,20 @@
 var mongoose = require('mongoose'), 
-	Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
-
-var threadSchema = new Schema({
-    title:  String,
-    postdate: {type: Date, default: Date.now},
-    author: {type: String, default: 'Anon'}
-});
+	Schema = mongoose.Schema;
 
 
-var postSchema = new Schema({
-    thread: ObjectId,
+exports.Users = mongoose.model('Users', new Schema({
+    
+    email:  String,
+    name:  String,
+    profile: Object,
+    date_created: {type: Date, default: Date.now},
+    id:  Schema.ObjectId
+}));
+
+exports.Posts = mongoose.model('Posts', new Schema({
+    
     date: {type: Date, default: Date.now},
     author: {type: String, default: 'Anon'},
-    post: String
-});
-
-
-exports.Thread = mongoose.model('Thread', threadSchema);
-exports.Post = mongoose.model('Post', postSchema);
+    text: String,
+    id: Schema.ObjectId
+}));

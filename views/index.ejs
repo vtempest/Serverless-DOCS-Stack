@@ -1,13 +1,71 @@
 <% include head %>
 <title>Home</title>
+<style type="text/css" media="screen">
+body { padding-top: 70px; }
+	
+</style>
+<script>
+$(document).ready(function(){
+
+function initPosts(){
+	$(".posts").empty();
+	$.getJSON("/posts", function (postsJson) {
+		
+		for (var i in postsJson)
+			$(".posts").append("<div class='post'><b>"+postsJson[i].author + ":</b> " +postsJson[i].text+"</div>");
+	})
+}	
+initPosts();
+
+$("#create-post-btn").click(function(){
+
+	$.get("/posts/create", {text: $("#create-post-text").val() }, function(){ 
+		initPosts(); 
+	})
+	
+})
+
+
+
+})
+
+</script>
 </head><body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
 
-<% if (!user) { %>
-	<h2>Welcome! Please log in.</h2>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+			<% if (!user) { %>
+				<a href="/login">Login with Google</a>
+			<% } else { %>
+				<a>Welcome <%= user.displayName %></a>
+			<% } %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<a href="/auth/google">Sign In</a>
+<div class="well well-sm">
+<h2>Welcome home</h2>
 
-<% } else { %>
-	<h2>Hello, <%= user.displayName %>.</h2>
-<% } %>
+<div class="container posts"></div>
 
+
+<input type="text" id="create-post-text"><button class="btn btn-default" id="create-post-btn">Post</button>
+
+
+</div>
