@@ -14,15 +14,14 @@ Minimalist nodejs webapp with tools you'll need in your projects:
 
 ```
 npm install
-npm install forever -g
-mkdir db
-mv ./node_modules/mongo-express/config.sample.json ./node_modules/mongo-express/config.json
+sudo npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js
 ```
+To setup db admin password and change port from localhost:8081 ```vi node_modules/mongo-express/config.js```
 
-Run each in three separate screens:
+
+Run to start server forever with auto-refresh. Log output to console, but press enter for more commands
 ```
 npm run mongo
-npm run admin 
 npm start
 ```
 
