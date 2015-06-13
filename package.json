@@ -4,7 +4,7 @@
   "scripts": {
     "start": "clear && sudo forever --minUptime=10 --spinSleepTime=2000 -v -w app.js ",
     "mongo": "sudo service mongodb stop && mkdir db && sudo mongod --dbpath=db --smallfiles --nojournal",
-    "admin": "sudo node .\\node_modules\\mongo-express\\app.js"
+    "admin": "sudo node node_modules/mongo-express/app.js"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
