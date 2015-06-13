@@ -28,14 +28,14 @@ npm start
 
 ## AWS 
 
-### Server setup
-```sudo apt-get update && sudo apt-get install  nodejs npm mongodb screen openssh build-essential python git```
+First time login setup
+```sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install  nodejs npm mongodb screen openssh build-essential python git```
 
 ###SSH Setup
-``ssh -i /path/to/your/Awskey.pem ubuntu@##.##.##.##```
+```ssh -i /path/to/your/Awskey.pem ubuntu@##.##.##.##```
 ```sudo adduser alex```
 Set a password
-``sudo visudo``
+```sudo visudo```
 Add this line
 ```alex ALL=NOPASSWD:ALL```
 Beneath the root ALL=(ALL):ALL line, and ctrl x to exit and enter y to save
