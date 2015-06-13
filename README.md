@@ -72,8 +72,8 @@ when you login, if you want the default directory to always be your site then ed
 ssh-keygen -t rsa -C "yourname@example.com"
 vi ~/.ssh/id_rsa.pub
 ```
-#copy this into a new key https://github.com/settings/ssh
-#now create a new git repo https://github.com/new
+copy from this console into a new key https://github.com/settings/ssh
+now create a new git repo https://github.com/new
 ```
 cd /path/to/site
 git init && git add * && git commit -a -m "init"
