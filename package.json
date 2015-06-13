@@ -13,7 +13,6 @@
     "ejs": "^2.3.1",
     "express": "~4.12.4",
     "express-session": "^1.11.3",
-    "forever": "^0.14.1",
     "mongo-express": "^0.21.0",
     "mongoose": "^4.0.5",
     "passport": "^0.2.2",
