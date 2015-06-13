@@ -1,12 +1,10 @@
 ##Nodejs Starter
 
-Minimalist nodejs webapp with tools you'll need in your projects:
+Minimalist nodejs webapp with tools you'll need:
 
-- express server
-- mongoose for mongodb
-- mongo-express for db admin
-- ejs templating
-- Jquery & Bootstrap interface
+- express server with minimal files 
+- mongoose for mongodb &mongo-express for db admin
+- ejs templating & Jquery & Bootstrap interface
 - Google user authentication with passport
 
 
