@@ -31,7 +31,7 @@ If it's the first time ever using this server, run this first:
 ## .bashrc
 
 Install useful .bashrc shortcuts: 
-```u```  check updates, ```l``` detailed file list, ```..``` parent dir, ```i [appname]``` install package, ```x [file]``` uncompress file, ```own [dir]``` get access to folder, ```p [procname]``` find process by name, ```f [string``` find string in this folder's files, ```gg``` git commit and push 
+```u```  check updates, ```l``` detailed file list, ```..``` parent dir, ```i [appname]``` install package, ```x [file]``` uncompress file, ```own [dir]``` get access to folder, ```p [procname]``` find process by name, ```f [string]``` find string in this folder's files, ```gg``` git commit and push 
 
 ```sed -i "$ a\#custom shortcuts \nx(){ case \$1 in *.tar.bz2) tar xjf \$1;; *.tar.gz) tar xzf \$1;; *.bz2) bunzip2 \$1;; *.rar) rar x \$1;; *.gz) gunzip \$1;; *.tar) tar xf \$1;; *.tbz2) tar xjf \$1;; *.tgz) tar xzf \$1;; *.zip) unzip \$1;; *.Z) uncompress \$1;; esac; } \nf(){ grep -R -I \"\$1\" ./*; } \np(){ ps aux | grep \$1 | grep -v grep; } \nown(){ sudo chmod 777 -R \${1:-.} && sudo chown -R \${USER} \${1:-.}; } \nalias u='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y' \nalias l='ls -la' \nalias ..='cd ..' \nalias i='sudo apt-get install' \nalias gg='git add . && git commit -a -m "." && git push -u -f origin master'" ~/.bashrc && source ~/.bashrc```
 
