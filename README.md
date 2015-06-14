@@ -90,6 +90,8 @@ Go to your ec2 manager and click elastic IPs on the sidebar, Allocate a new addr
 [Atom](https://atom.io/)
 [Node.js](https://nodejs.org/download/)
 [MongoDB](https://www.mongodb.org/downloads)
+[Postman (Chrome)](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm)
+[SSH Shell (Chrome)](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?utm_source=chrome-app-launcher-info-dialog)
 
 Windows:
 [WinSCP](http://winscp.net/eng/download.php#download2)
