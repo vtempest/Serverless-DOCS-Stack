@@ -11,6 +11,7 @@ Sample nodejs webapp with tools you'll need:
 ###Setup
 
 ```
+git clone https://github.com/gulakov/nodejs-starter.git
 npm install
 sudo npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js
 ```
