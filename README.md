@@ -25,14 +25,15 @@ npm start
 
 
 If it's the first time ever using this server, run this first:
-```sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm mongodb screen openssh build-essential python git```
+```sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm mongodb screen openssh build-essential python git unzip rar```
 
 
 ## .bashrc
 
-Install useful .bashrc shortcuts: ```u``` to check updates, ```l``` detailed file list, ```..``` parent dir, ```i <appname>``` install package
+Install useful .bashrc shortcuts: 
+```u```  check updates, ```l``` detailed file list, ```..``` parent dir, ```i [appname]``` install package, ```x [file]``` uncompress file, ```own [dir]``` get access to folder, ```p [procname]``` find process by name
 
-```echo "alias u='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y'" >> ~/.bashrc &&  echo "alias l='ls -la'" >> ~/.bashrc && echo "alias ..='cd ..'" >> ~/.bashrc && echo "alias i='sudo apt-get install'" >> ~/.bashrc && source ~/.bashrc```
+```sed -i "$ a\#custom shortcuts \nx(){ case \$1 in *.tar.bz2) tar xjf \$1;; *.tar.gz) tar xzf \$1;; *.bz2) bunzip2 \$1;; *.rar) rar x \$1;; *.gz) gunzip \$1;; *.tar) tar xf \$1;; *.tbz2) tar xjf \$1;; *.tgz) tar xzf \$1;; *.zip) unzip \$1;; *.Z) uncompress \$1;; esac; } \np(){ ps aux | grep \$1 | grep -v grep; } \nown(){ sudo chmod 777 -R \${1:-.} && sudo chown -R \${USER} \${1:-.}; } \nalias u='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y' \nalias l='ls -la' \nalias ..='cd ..' \nalias i='sudo apt-get install' \nalias gg='git commit -A -m "." && git push -u -f origin master'" .bashrc```
 
 when you login, if you want the default directory to always be your site then edit this with the path:
 ```echo "cd /path/to/site" >> ~/.bashrc```
