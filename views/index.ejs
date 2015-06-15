@@ -51,15 +51,14 @@ $(document).ready(function(){
         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
         
       </ul>
-     
       <ul class="nav navbar-nav navbar-right">
-        <li>
+        
 			<% if (!user) { %>
-				<a href="/login">Login with Google</a>
+				<li><a href="/auth/google">Google Login</a> </li>  <li><a href="/auth/facebook">Facebook  Login</a> </li>
 			<% } else { %>
-				<a>Welcome <%= user.displayName %></a>
+				<li><a>Welcome <%= user.displayName %></a></li>
 			<% } %>
-        </li>
+       
       </ul>
     </div>
   </div>
