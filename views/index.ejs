@@ -7,23 +7,29 @@ body { padding-top: 70px; }
 <script>
 $(document).ready(function(){
 
-function initPosts(){
-	$(".posts").empty();
-	$.getJSON("/posts", function (postsJson) {
-		
-		for (var i in postsJson)
-			$(".posts").append("<div class='post'><b>"+postsJson[i].author + ":</b> " +postsJson[i].text+"</div>");
-	})
-}	
-initPosts();
+  function initPosts(){
+  	$(".posts").empty();
+  	$.getJSON("/posts", function (postsJson) {
+  		
+  		for (var i in postsJson)
+  			$(".posts").append("<div class='post'><b>"+postsJson[i].author + ":</b> " +postsJson[i].text+"</div>");
+  	})
+  }	
+  initPosts();
 
-$("#create-post-btn").click(function(){
+  $("#create-post-btn").click(function(){
 
-	$.get("/posts/create", {text: $("#create-post-text").val() }, function(){ 
-		initPosts(); 
-	})
-	
-})
+    if($("a[href='/login']").length){
+      alert("Login required");
+      return;
+    }
+
+
+  	$.get("/posts/create", {text: $("#create-post-text").val() }, function(){ 
+  		initPosts(); 
+  	})
+  	
+  })
 
 
 
