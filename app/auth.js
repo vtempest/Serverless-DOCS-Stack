@@ -4,12 +4,10 @@ var app = express.Router();
 var model = require('./models');
 var Users = model.Users;
 
+var passport = require( 'passport' ), 
+  GoogleStrategy = require( 'passport-google-oauth2' ).Strategy,
+  FacebookStrategy = require('passport-facebook').Strategy  
 
-
-
-//Google oAuth2 signin
-var  passport = require( 'passport' ), 
- 	GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -19,10 +17,12 @@ passport.deserializeUser(function(obj, done) {
   done(null, obj);
 });
 
+
+//from https://console.developers.google.com
 passport.use(new GoogleStrategy({
-   	clientID: '6754547....CLIENT_ID_googleusercontent.com',
-    clientSecret: '8TbemY...SECRET',
-    callbackURL: "http://localhost/auth/callback",
+    clientID: '985761260764-43cc4v7fnoakhn9dl8g0ljdepcc3bbqb.apps.googleusercontent.com',
+    clientSecret: 'o6fMu2y21nvBw6uOhL0IpkfA',
+    callbackURL: "http://localhost/auth/google/callback",
   },
   function(request, accessToken, refreshToken, profile, done) {
     new Users({
@@ -32,24 +32,51 @@ passport.use(new GoogleStrategy({
       }).save();
 
     process.nextTick(function () {
-    	//register
-
+      //register user here 
       return done(null, profile);
     });
   }
 ));
 
+
+// from https://developers.facebook.com
+passport.use(new FacebookStrategy({
+    clientID: "576698319111712",
+    clientSecret: "77abbf1655bc48d53277efdcb7e36d95",
+    callbackURL: "http://localhost/auth/facebook/callback"
+  },
+  function(accessToken, refreshToken, profile, done) {
+    process.nextTick(function () {
+      //register user here 
+      return done(null, profile);
+    });
+  }
+));
+
+
 app.use( passport.initialize());
 app.use( passport.session());
 
 
+app.get('/auth/facebook',
+  passport.authenticate('facebook'),
+  function(req, res){ });
 
-app.get('/login', passport.authenticate('google', { scope: [
+
+app.get('/auth/facebook/callback', 
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/');
+  });
+
+
+
+app.get('/auth/google', passport.authenticate('google', { scope: [
        'https://www.googleapis.com/auth/plus.login',
        'https://www.googleapis.com/auth/plus.profile.emails.read'] 
 }));
 
-app.get( '/auth/callback', 
+app.get( '/auth/google/callback', 
       passport.authenticate( 'google', { 
         successRedirect: '/',
         failureRedirect: '/'
@@ -62,11 +89,9 @@ app.get('/logout', function(req, res){
 
 
 
-app.get('/success', ensureAuthenticated, function(req, res){
-  
+app.get('/account', ensureAuthenticated, function(req, res){
   res.json(req.user)
-
-
+  
 });
 
 
