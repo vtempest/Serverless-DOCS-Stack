@@ -1,0 +1,9 @@
+.git
+.git/**/*
+**/.git/**/*
+db
+db/**/*
+**/db/**/*
+node_modules
+node_modules/**/*
+**/node_modules/**/*
