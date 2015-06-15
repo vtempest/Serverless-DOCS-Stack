@@ -12,8 +12,9 @@ Sample nodejs webapp with tools you'll need:
 
 ```
 git clone https://github.com/gulakov/nodejs-starter.git
+cd nodejs-starter
 npm install
-sudo npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js
+npm run setup
 ```
 To setup db admin password and change port from localhost:8081 ```vi node_modules/mongo-express/config.js```
 Register your app for [Google Developer](https://console.developers.google.com/project) and put the keys and callbacks in the auth.js file to make logins work.
