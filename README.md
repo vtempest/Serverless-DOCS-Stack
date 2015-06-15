@@ -99,7 +99,7 @@ Windows:
 [Putty](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe)
 [Cygwin](https://cygwin.com/setup-x86.exe)
 [Github](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
-[EnvEditor](http://www.rapidee.com/download/RapidEE_setup.exe)
+[PathEditor](https://patheditor2.codeplex.com/)
 [WAMPServer](http://www.wampserver.com/en/)
 
 Windows Nodejs NPM install dependencies:
