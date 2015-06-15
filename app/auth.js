@@ -20,9 +20,9 @@ passport.deserializeUser(function(obj, done) {
 });
 
 passport.use(new GoogleStrategy({
-   	clientID: '675454780693-7n34ikba11h972dgfc0kgib0id9gudo8.apps.googleusercontent.com',
-    clientSecret: '8TbemY_MUonCCRhhuIjwV-ho',
-    callbackURL: "http://testing.com/auth/index/callback",
+   	clientID: '6754547....CLIENT_ID_googleusercontent.com',
+    clientSecret: '8TbemY...SECRET',
+    callbackURL: "http://localhost/auth/callback",
   },
   function(request, accessToken, refreshToken, profile, done) {
     new Users({
@@ -49,7 +49,7 @@ app.get('/login', passport.authenticate('google', { scope: [
        'https://www.googleapis.com/auth/plus.profile.emails.read'] 
 }));
 
-app.get( '/auth/index/callback', 
+app.get( '/auth/callback', 
       passport.authenticate( 'google', { 
         successRedirect: '/',
         failureRedirect: '/'
