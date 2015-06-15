@@ -17,7 +17,7 @@ npm install
 npm run setup
 ```
 To setup db admin password and change port from localhost:8081 ```vi node_modules/mongo-express/config.js```
-Register your app for [Google Developer](https://console.developers.google.com/project) and put the keys and callbacks in the auth.js file to make logins work.
+Register your app for [Google Developer](https://console.developers.google.com/project) or [Facebook Developer](https://developers.facebook.com/) and put the keys and callbacks in the auth.js file to make logins work.
 
 On linux run ```sudo npm run mongo``` to start database, enter for new line or new console, then run ```sudo npm start``` to start server forever with auto-refresh. Log output to console, but press enter for more commands. On windows use ```npm run mongo-win``` and ```npm run start-win``` in separate consoles.
 
