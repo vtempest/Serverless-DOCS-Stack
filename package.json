@@ -5,7 +5,9 @@
    "start": "nohup clear &&  forever --minUptime=10 --spinSleepTime=2000 -v -w app.js &",
     "mongo": "nohup  service mongodb stop &&  rm -f db/mongod.lock &&  mongod --dbpath=db --smallfiles --nojournal &&  node node_modules/mongo-express/app.js &",
     "admin": "nohup node node_modules/mongo-express/app.js &",
-    "setup": " npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js"
+    "setup": " npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js",  "start-win": " forever --minUptime=10 --spinSleepTime=2000 -v -w app.js",
+    "start-win": " forever --minUptime=10 --spinSleepTime=2000 -v -w app.js",
+    "mongo-win": "rm -f db/mongod.lock;  mongod --dbpath=db --smallfiles --nojournal; node node_modules/mongo-express/app.js"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
@@ -17,6 +19,7 @@
     "mongo-express": "^0.21.0",
     "mongoose": "^4.0.5",
     "passport": "^0.2.2",
+    "passport-facebook": "^2.0.0",
     "passport-google-oauth2": "^0.1.6"
   }
 }
