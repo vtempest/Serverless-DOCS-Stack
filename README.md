@@ -20,8 +20,8 @@ Register your app for [Google Developer](https://github.com/gulakov/nodejs-start
 
 Run to start server forever with auto-refresh. Log output to console, but press enter for more commands
 ```
-npm run mongo
-npm start
+sudo npm run mongo
+sudo npm start
 ```
 
 

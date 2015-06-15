@@ -2,9 +2,10 @@
   "name": "nodejs-starter",
   "version": "0.0.0",
   "scripts": {
-   "start": "nohup clear && sudo forever --minUptime=10 --spinSleepTime=2000 -v -w app.js &",
-    "mongo": "nohup sudo service mongodb stop &&  rm -f db/mongod.lock && sudo mongod --dbpath=db --smallfiles --nojournal && sudo node node_modules/mongo-express/app.js &",
-    "setup": "sudo npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js"
+   "start": "nohup clear &&  forever --minUptime=10 --spinSleepTime=2000 -v -w app.js &",
+    "mongo": "nohup  service mongodb stop &&  rm -f db/mongod.lock &&  mongod --dbpath=db --smallfiles --nojournal &&  node node_modules/mongo-express/app.js &",
+    "admin": "nohup node node_modules/mongo-express/app.js &",
+    "setup": " npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
