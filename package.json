@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "nohup clear &&  forever --minUptime=10 --spinSleepTime=2000 -v -w app.js &",
-    "mongo": "nohup service mongodb stop  &&  node node_modules/mongo-express/app.js &&  rm -f db/mongod.lock &&  mongod --dbpath=db --smallfiles --nojournal &",
+    "mongo": "nohup service mongodb stop &&  rm -f db/mongod.lock &&  mongod --dbpath=db --smallfiles --nojournal &",
     "admin": "nohup node node_modules/mongo-express/app.js &",
     "setup": " npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js",
     "start-win": "cls & forever --minUptime=10 --spinSleepTime=2000 -v -w app.js",
