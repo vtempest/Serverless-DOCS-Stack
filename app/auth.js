@@ -20,8 +20,8 @@ passport.deserializeUser(function(obj, done) {
 
 //from https://console.developers.google.com
 passport.use(new GoogleStrategy({
-    clientID: '985761260764-43cc4v7fnoakhn9dl8g0ljdepcc3bbqb.apps.googleusercontent.com',
-    clientSecret: 'o6fMu2y21nvBw6uOhL0IpkfA',
+    clientID: '985761....',
+    clientSecret: 'o6fMu2y...',
     callbackURL: "http://localhost/auth/google/callback",
   },
   function(request, accessToken, refreshToken, profile, done) {
@@ -41,8 +41,8 @@ passport.use(new GoogleStrategy({
 
 // from https://developers.facebook.com
 passport.use(new FacebookStrategy({
-    clientID: "576698319111712",
-    clientSecret: "77abbf1655bc48d53277efdcb7e36d95",
+    clientID: "576698....",
+    clientSecret: "77abbf16....",
     callbackURL: "http://localhost/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
