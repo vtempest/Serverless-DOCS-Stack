@@ -22,7 +22,7 @@ Register your app for [Google Developer](https://console.developers.google.com/p
 On linux run ```sudo npm run mongo``` to start database, enter for new line or new console, then run ```sudo npm start``` to start server forever with auto-refresh. Log output to console, but press enter for more commands. On windows use ```npm run mongo-win``` and ```npm run start-win``` in separate consoles.
 
 For Windows prerequisites, see below for VS2010  Python27 NodeJS MongoDB (you must add mongo to path). For linux, if it's the first time ever using this server, run this first:
-```sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy mongodb screen openssh-server build-essential python git unzip rar```
+```sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy mongodb screen openssh-server build-essential python git unzip unrar```
 
 
 ## .bashrc
