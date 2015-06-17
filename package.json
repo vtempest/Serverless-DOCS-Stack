@@ -7,8 +7,9 @@
     "admin": "nohup node node_modules/mongo-express/app.js &",
     "setup": " npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js",
     "start-win": "cls & forever --minUptime=10 --spinSleepTime=2000 -v -w app.js",
-    "mongo-win": "rm -f db/mongod.lock & node node_modules/mongo-express/app.js & mongod --dbpath=db --smallfiles --nojournal "
-  },
+    "mongo-win": "rm -f db/mongod.lock & node node_modules/mongo-express/app.js & mongod --dbpath=db --smallfiles --nojournal ",
+    "apt-get": "sudo apt-add-repository multiverse && sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy mongodb screen openssh-server build-essential python git unzip unrar",
+},
   "dependencies": {
     "body-parser": "~1.12.4",
     "cookie-parser": "~1.3.5",
