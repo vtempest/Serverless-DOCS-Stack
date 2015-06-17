@@ -88,7 +88,7 @@ Go to your ec2 manager and click elastic IPs on the sidebar, Allocate a new addr
 [Node.js](https://nodejs.org/download/)
 [MongoDB](https://www.mongodb.org/downloads)
 [Postman (Chrome)](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm)
-[SSH Shell (Chrome)](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?utm_source=chrome-app-launcher-info-dialog)
+[SSH Shell (Chrome)](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?utm_source=chrome-app-launcher-info-dialog) [NPM Tools](https://github.com/sindresorhus/awesome-nodejs)
 
 Windows:
 [WinSCP](http://winscp.net/eng/download.php#download2)
@@ -99,5 +99,5 @@ Windows:
 [WAMPServer](http://www.wampserver.com/en/)
 
 Windows Nodejs NPM install dependencies:
-[VS2010](https://app.vssps.visualstudio.com/profile/review?download=true&family=VisualStudioCExpress&release=VisualStudio2010&type=web&slcid=0x409)
+[Visual Studio](https://www.visualstudio.com/products/visual-studio-community-vs)
 [Python2.7](https://www.python.org/downloads/)
