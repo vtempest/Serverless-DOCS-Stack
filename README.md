@@ -84,7 +84,6 @@ Go to your ec2 manager and click elastic IPs on the sidebar, Allocate a new addr
 ### Programs
 [Sublime](http://www.sublimetext.com/3)
 [(Sublime Packages)](https://packagecontrol.io/installation)
-[Atom](https://atom.io/)
 [Node.js](https://nodejs.org/download/)
 [MongoDB](https://www.mongodb.org/downloads)
 [Postman (Chrome)](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm)
