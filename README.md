@@ -39,8 +39,12 @@ when you login, if you want the default directory to always be your site then ed
 ## Git 
 
 ```
+git config --global user.name "Your Name"
+git config --global user.email yourname@example.com
+
+
 ssh-keygen -t rsa -C "yourname@example.com"
-vi ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub
 ```
 copy from this console into a new key https://github.com/settings/ssh
 now create a new git repo https://github.com/new
