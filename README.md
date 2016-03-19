@@ -28,7 +28,7 @@ For Windows prerequisites, see below for VS2010  Python27 NodeJS MongoDB (you mu
 ## .bashrc
 
 Install useful .bashrc shortcuts: 
-```u```  check updates, ```l``` detailed file list, ```..``` parent dir, ```i [appname]``` install package, ```x [file]``` uncompress file, ```own [dir]``` get access to folder, ```p [procname]``` find process by name, ```f [string]``` find string in this folder's files, ```gg``` git commit and push 
+```u```  check updates, ```l``` detailed file list, ```..``` parent dir, ```i [appname]``` install package, ```x [file]``` uncompress file, ```own [dir]``` get access to folder, ```p [procname]``` find process by name, ```gg``` git commit and push,  ```f [string]``` find string in this folder's files, ```ff [string]``` find string in this folder's file and subfolder names, ```fr [string] [string]``` find and replace string in this folder's files
 
 ```
 # color
@@ -71,7 +71,7 @@ when you login, if you want the default directory to always be your site then ed
 ```
 git config --global user.name "Your Name"
 git config --global user.email yourname@example.com
-
+git config --global credential.helper cache
 
 ssh-keygen -t rsa -C "yourname@example.com"
 cat ~/.ssh/id_rsa.pub
