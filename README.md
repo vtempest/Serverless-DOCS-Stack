@@ -30,7 +30,37 @@ For Windows prerequisites, see below for VS2010  Python27 NodeJS MongoDB (you mu
 Install useful .bashrc shortcuts: 
 ```u```  check updates, ```l``` detailed file list, ```..``` parent dir, ```i [appname]``` install package, ```x [file]``` uncompress file, ```own [dir]``` get access to folder, ```p [procname]``` find process by name, ```f [string]``` find string in this folder's files, ```gg``` git commit and push 
 
-```sed -i "$ a\#custom shortcuts \nx(){ case \$1 in *.tar.bz2) tar xjf \$1;; *.tar.gz) tar xzf \$1;; *.bz2) bunzip2 \$1;; *.rar) rar x \$1;; *.gz) gunzip \$1;; *.tar) tar xf \$1;; *.tbz2) tar xjf \$1;; *.tgz) tar xzf \$1;; *.zip) unzip \$1;; *.Z) uncompress \$1;; esac; } \nf(){ grep -R -I \"\$1\" ./*; } \np(){ ps aux | grep \$1 | grep -v grep; } \nown(){ sudo chmod 777 -R \${1:-.} && sudo chown -R \${USER} \${1:-.}; } \nalias u='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y' \nalias l='ls -la' \nalias ..='cd ..' \nalias i='sudo apt-get install -y ' \nalias gg='git add . && git commit -a -m "." && git push -u -f origin master'" ~/.bashrc && source ~/.bashrc```
+```
+# color
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+alias grep='grep --color=always'
+
+# bash history
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTCONTROL=ignoreboth
+rm -f /home/$USER/.bash_history
+export HISTFILE=/home/$USER/.config/.bash_history
+shopt -s histappend
+shopt -s checkwinsize
+. /usr/share/bash-completion/bash_completion
+
+
+# shortcuts
+x(){ case $1 in *.tar.bz2) tar xjf $1;; *.tar.gz) tar xzf $1;; *.bz2) bunzip2 $1;; *.rar) rar x $1;; *.gz) gunzip $1;; *.tar) tar xf $1;; *.tbz2) tar xjf $1;; *.tgz) tar xzf $1;; *.zip) unzip $1;; *.Z) uncompress $1;; esac; }
+
+p(){ ps aux | grep $1 | grep -v grep; }
+own(){ sudo chmod 777 -R ${1:-.} && sudo chown -R ${USER} ${1:-.}; }
+alias u='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y'
+alias l='ls -la --color=always'
+alias ..='cd ..'
+alias i='sudo apt-get install -y '
+alias gg='git add . && git commit -a -m . && git push -u -f origin master'
+f(){ grep -R -I "$1" -s .; }
+ff(){ find "."  -readable | grep "$1"; }
+fr(){ find . -type f -exec sed -i "s/$1/$2/g" \{\} \; ;}
+alias r='sudo reboot'
+```
 
 when you login, if you want the default directory to always be your site then edit this with the path:
 ```echo "cd /path/to/site" >> ~/.bashrc```
