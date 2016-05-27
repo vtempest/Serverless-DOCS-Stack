@@ -116,7 +116,7 @@ Go to your ec2 manager and click elastic IPs on the sidebar, Allocate a new addr
 
 
 ### VirtualBox 
-To develop on a local virtual machine server, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Ubuntu Server](http://www.ubuntu.com/download/server. Settings>Storage>Add Optical Drive> Select ubuntu iso and check Live CD. System>MotherBoard and System>Processor, allocate more RAM and CPU cores for speed. 
+To develop on a local virtual machine server, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Ubuntu Server](http://www.ubuntu.com/download/server). Settings>Storage>Add Optical Drive> Select ubuntu iso and check Live CD. System>MotherBoard and System>Processor, allocate more RAM and CPU cores for speed. 
 
 SSH+HTTP: Settings>Network>Adapter 1> Attached to: NAT, Advanced > Port Forwarding > Host IP 127.0.0.1 : 22 to Guest IP 10.0.2.15 : 22 and so the vm can serve http pages and see in browser at localhost:[port], also add  127.0.0.1 : 80 (or other port) to Guest IP 10.0.2.15 : 80. Now you can Shift+Click "Start" ro run vm in background and ssh [vm user name]@localhost. You can also add your virtualbox to path and create a shortcut script to start vm from command line:  VBoxManage startvm "ubuntu server" --type headless
 
