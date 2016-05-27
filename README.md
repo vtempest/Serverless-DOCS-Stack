@@ -115,9 +115,18 @@ Domain:
 Go to your ec2 manager and click elastic IPs on the sidebar, Allocate a new address, then associate address and select your running instance to be associated with that address. Now go to Route 53 under the aws console dropdown and click Create Hosted Zone, name it your site's name .com, then go to record sets, create record set Type: A with the Value of the Elastic IP you got before. Now copy the Name Server values, which look like ns-1877.awsdns-42.co.uk. ns-1149.awsdns-15.org. ns-923.awsdns-51.net. ns-216.awsdns-27.com. and paste those into your DNS registrar's settings for custom DNS.
 
 
+### VirtualBox 
+To develop on a local virtual machine server, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Ubuntu Server](http://www.ubuntu.com/download/server. Settings>Storage>Add Optical Drive> Select ubuntu iso and check Live CD. System>MotherBoard and System>Processor, allocate more RAM and CPU cores for speed. 
+
+SSH+HTTP: Settings>Network>Adapter 1> Attached to: NAT, Advanced > Port Forwarding > Host IP 127.0.0.1 : 22 to Guest IP 10.0.2.15 : 22 and so the vm can serve http pages and see in browser at localhost:[port], also add  127.0.0.1 : 80 (or other port) to Guest IP 10.0.2.15 : 80. Now you can Shift+Click "Start" ro run vm in background and ssh [vm user name]@localhost. You can also add your virtualbox to path and create a shortcut script to start vm from command line:  VBoxManage startvm "ubuntu server" --type headless
+
+Shared Folders: so you can develop in a real IDE   first install VBox Guest Additions: Devices>Insert Guest Addition iso, then sudo mount /dev/cdrom /media/cdrom && sudo /media/cdrom/VBoxLinuxAdditions.run, next shutdown and Settings>Shared Folders>Add folder with local path and share_name and Auto-mount. Then boot the vm and shared folder is at /media/sf_[share_name] but you can change mount point: sudo mkdir [/path/new/mount/point] && sudo mount -t vboxsf [share_name] [/path/new/mount/point] 
+
+
 ### Programs
 [Sublime](http://www.sublimetext.com/3)
 [(Sublime Packages)](https://packagecontrol.io/installation)
+[Atom](https://atom.io/)
 [Node.js](https://nodejs.org/download/)
 [MongoDB](https://www.mongodb.org/downloads)
 [Postman (Chrome)](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm)
@@ -125,12 +134,7 @@ Go to your ec2 manager and click elastic IPs on the sidebar, Allocate a new addr
 
 Windows:
 [WinSCP](http://winscp.net/eng/download.php#download2)
-[Putty](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe)
 [Cygwin](https://cygwin.com/setup-x86.exe)
 [Github](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
 [PathEditor](https://patheditor2.codeplex.com/)
-[WAMPServer](http://www.wampserver.com/en/)
-
-Windows Nodejs NPM install dependencies:
 [Visual Studio](https://www.visualstudio.com/products/visual-studio-community-vs)
-[Python2.7](https://www.python.org/downloads/)
