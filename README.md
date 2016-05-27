@@ -21,8 +21,7 @@ Register your app for [Google Developer](https://console.developers.google.com/p
 
 On linux run ```sudo npm run mongo``` to start database, enter for new line or new console, then run ```sudo npm start``` to start server forever, with auto-restarts on file changes, and with auto-refresh on pages with the line of code from head.ejs. Output logs to console, but press enter to use the window for more commands (or use ```screen``` for new console screens and Ctrl+A+D to detach and ```screen -r``` # to retach.) On windows use ```npm run mongo-win``` and ```npm run start-win``` in separate consoles.
 
-For Windows prerequisites, see below for VS2010  Python27 NodeJS MongoDB (you must add mongo to path). For linux, if it's the first time ever using this server, run this first:
-```sudo apt-add-repository multiverse && sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy libkrb5-dev mongodb screen openssh-server build-essential python git unzip unrar```
+Ubuntu Server first time setup: ```sudo apt-add-repository multiverse && sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy libkrb5-dev mongodb screen openssh-server build-essential python git unzip unrar```
 
 
 ## .bashrc
@@ -31,11 +30,8 @@ Install useful .bashrc shortcuts:
 ```u```  check updates, ```l``` detailed file list, ```..``` parent dir, ```i [appname]``` install package, ```x [file]``` uncompress file, ```own [dir]``` get access to folder, ```p [procname]``` find process by name, ```gg``` git commit and push,  ```f [string]``` find string in this folder's files, ```ff [string]``` find string in this folder's file and subfolder names, ```fr [string] [string]``` find and replace string in this folder's files
 
 ```
-# color
+# bash specific
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-alias grep='grep --color=always'
-
-# bash history
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTCONTROL=ignoreboth
@@ -45,6 +41,9 @@ shopt -s histappend
 shopt -s checkwinsize
 . /usr/share/bash-completion/bash_completion
 
+
+
+alias grep='grep --color=always'
 
 # shortcuts
 x(){ case $1 in *.tar.bz2) tar xjf $1;; *.tar.gz) tar xzf $1;; *.bz2) bunzip2 $1;; *.rar) rar x $1;; *.gz) gunzip $1;; *.tar) tar xf $1;; *.tbz2) tar xjf $1;; *.tgz) tar xzf $1;; *.zip) unzip $1;; *.Z) uncompress $1;; esac; }
