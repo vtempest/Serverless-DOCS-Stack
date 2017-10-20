@@ -1,13 +1,12 @@
 {
   "name": "generator-node-web-server-with-google-login-mongoose-orm",
+   "description": "Sample nodejs webapp and server setup guide, with Google User login, and mongoose ORM, and interface",
   "version": "0.5.0",
   "scripts": {
     "start": "nohup clear &&  forever --minUptime=10 --spinSleepTime=2000 -v -w app.js &",
     "mongo": "nohup service mongodb stop &&  rm -f db/mongod.lock &&  mongod --dbpath=db --smallfiles --nojournal &",
     "admin": "nohup node node_modules/mongo-express/app.js &",
     "setup": " npm install forever -g && mkdir db && mv node_modules/mongo-express/config.default.js node_modules/mongo-express/config.js",
-    "start-win": "cls & forever --minUptime=10 --spinSleepTime=2000 -v -w app.js",
-    "mongo-win": "rm -f db/mongod.lock & node node_modules/mongo-express/app.js & mongod --dbpath=db --smallfiles --nojournal ",
     "apt-get": "sudo apt-add-repository multiverse && sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy mongodb screen openssh-server build-essential python git unzip unrar"
 },
   "dependencies": {
@@ -22,5 +21,20 @@
     "passport": "^0.2.2",
     "passport-facebook": "^2.0.0",
     "passport-google-oauth2": "^0.1.6"
-  }
+  },
+  
+ "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gulakov/create-node-web-app.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "google-login",
+    "user-login",
+    "node-web-app",
+    "mongoose"
+  ],
+  "author": "Alex Gulakov <alexgulakov@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/gulakov/create-node-web-app"
 }
