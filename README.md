@@ -19,7 +19,7 @@ sudo npm run setup
 To setup db admin password and change port from localhost:8081 ```vi node_modules/mongo-express/config.js```
 Register your app for [Google Developer](https://console.developers.google.com/project) or [Facebook Developer](https://developers.facebook.com/) and put the keys and callbacks in the auth.js file to make logins work.
 
-On linux run ```sudo npm run mongo``` to start database, enter for new line or new console, then run ```sudo npm start``` to start server forever, with auto-restarts on file changes, and with auto-refresh on pages with the line of code from head.ejs. Output logs to console, but press enter to use the window for more commands (or use ```screen``` for new console screens and Ctrl+A+D to detach and ```screen -r``` # to retach.) On windows use ```npm run mongo-win``` and ```npm run start-win``` in separate consoles.
+On linux run ```sudo npm run mongo``` to start database, enter for new line or new console, then run ```sudo npm start``` to start server forever, with auto-restarts on file changes, and with auto-refresh on pages with the line of code from head.ejs. Output logs to console, but press enter to use the window for more commands (or use ```screen``` for new console screens and Ctrl+A+D to detach and ```screen -r``` # to retach.) 
 
 Ubuntu Server first time setup: ```sudo apt-add-repository multiverse && sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy libkrb5-dev mongodb screen openssh-server build-essential python git unzip unrar```
 
@@ -131,9 +131,3 @@ Shared Folders: so you can develop in a real IDE   first install VBox Guest Addi
 [Postman (Chrome)](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm)
 [SSH Shell (Chrome)](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?utm_source=chrome-app-launcher-info-dialog) [NPM Tools](https://github.com/sindresorhus/awesome-nodejs)
 
-Windows:
-[WinSCP](http://winscp.net/eng/download.php#download2)
-[Cygwin](https://cygwin.com/setup-x86.exe)
-[Github](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
-[PathEditor](https://patheditor2.codeplex.com/)
-[Visual Studio](https://www.visualstudio.com/products/visual-studio-community-vs)
