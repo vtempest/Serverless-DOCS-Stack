@@ -1,4 +1,4 @@
-##Nodejs Starter
+## Starter Node Web App 
 
 Sample nodejs webapp with tools you'll need:
 
@@ -8,7 +8,7 @@ Sample nodejs webapp with tools you'll need:
 - Google & FB login with [passport](http://passportjs.org/docs/overview)
 
 
-###Setup
+## Setup
 
 ```
 git clone https://github.com/gulakov/nodejs-starter.git
