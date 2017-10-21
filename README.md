@@ -24,45 +24,7 @@ On linux run ```sudo npm run mongo``` to start database, enter for new line or n
 Ubuntu Server first time setup: ```sudo apt-add-repository multiverse && sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy libkrb5-dev mongodb screen openssh-server build-essential python git unzip unrar```
 
 
-## .bashrc
-
-Install useful .bashrc shortcuts: 
-```u```  check updates, ```l``` detailed file list, ```..``` parent dir, ```i [appname]``` install package, ```x [file]``` uncompress file, ```own [dir]``` get access to folder, ```p [procname]``` find process by name, ```gg``` git commit and push,  ```f [string]``` find string in this folder's files, ```ff [string]``` find string in this folder's file and subfolder names, ```fr [string] [string]``` find and replace string in this folder's files
-
-```
-# bash specific
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-HISTSIZE=1000
-HISTFILESIZE=2000
-HISTCONTROL=ignoreboth
-rm -f /home/$USER/.bash_history
-export HISTFILE=/home/$USER/.config/.bash_history
-shopt -s histappend
-shopt -s checkwinsize
-. /usr/share/bash-completion/bash_completion
-
-
-
-alias grep='grep --color=always'
-
-# shortcuts
-x(){ case $1 in *.tar.bz2) tar xjf $1;; *.tar.gz) tar xzf $1;; *.bz2) bunzip2 $1;; *.rar) rar x $1;; *.gz) gunzip $1;; *.tar) tar xf $1;; *.tbz2) tar xjf $1;; *.tgz) tar xzf $1;; *.zip) unzip $1;; *.Z) uncompress $1;; esac; }
-
-p(){ ps aux | grep $1 | grep -v grep; }
-own(){ sudo chmod 777 -R ${1:-.} && sudo chown -R ${USER} ${1:-.}; }
-alias u='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y'
-alias l='ls -la --color=always'
-alias ..='cd ..'
-alias i='sudo apt-get install -y '
-alias gg='git add . && git commit -a -m . && git push -u -f origin master'
-f(){ grep -R -I "$1" -s .; }
-ff(){ find "."  -readable | grep "$1"; }
-fr(){ find . -type f -exec sed -i "s/$1/$2/g" \{\} \; ;}
-alias r='sudo reboot'
-```
-
-when you login, if you want the default directory to always be your site then edit this with the path:
-```echo "cd /path/to/site" >> ~/.bashrc```
+Setup your server shell with useful shortcuts for updating and searching your files with [this zshrc](https://github.com/gulakov/awesome-zsh).
 
 
 ## Git 
@@ -70,7 +32,6 @@ when you login, if you want the default directory to always be your site then ed
 ```
 git config --global user.name "Your Name"
 git config --global user.email yourname@example.com
-git config --global credential.helper cache
 
 ssh-keygen -t rsa -C "yourname@example.com"
 cat ~/.ssh/id_rsa.pub
@@ -123,11 +84,12 @@ Shared Folders: so you can develop in a real IDE   first install VBox Guest Addi
 
 
 ### Programs
-[Sublime](http://www.sublimetext.com/3)
-[(Sublime Packages)](https://packagecontrol.io/installation)
 [Atom](https://atom.io/)
 [Node.js](https://nodejs.org/download/)
 [MongoDB](https://www.mongodb.org/downloads)
 [Postman (Chrome)](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm)
-[SSH Shell (Chrome)](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?utm_source=chrome-app-launcher-info-dialog) [NPM Tools](https://github.com/sindresorhus/awesome-nodejs)
-
+[Hyperterm](http://hyper.is/)
+[Sublime](http://www.sublimetext.com/3)
+[(Sublime Packages)](https://packagecontrol.io/installation)
+[Sublime](http://www.sublimetext.com/3)
+[(Sublime Packages)](https://packagecontrol.io/installation)
