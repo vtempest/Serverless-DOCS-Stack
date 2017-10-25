@@ -1,18 +1,22 @@
 ## Starter Node Web App 
 
-Sample nodejs webapp with tools you'll need:
-
 - Nodejs [express](http://expressjs.com/4x/api.html) server with minimal files 
 - [mongoose](http://mongoosejs.com/docs/guide.html) for mongodb & [mongo-express](https://github.com/andzdroid/mongo-express) for admin
-- [EJS](https://github.com/mde/ejs) templating & [Jquery](https://learn.jquery.com/using-jquery-core/) & [Bootstrap](http://getbootstrap.com/components/) interface on top of [HTML CSS JS apps](https://developer.mozilla.org/en-US/docs/Web/Tutorials)
+- [EJS](https://github.com/mde/ejs) templating & [Jquery](https://learn.jquery.com/using-jquery-core/) & [Bootstrap](http://getbootstrap.com/components/) interface 
 - Google & FB login with [passport](http://passportjs.org/docs/overview)
 
 
 ## Setup
 
 ```
-git clone https://github.com/gulakov/nodejs-starter.git
-cd nodejs-starter
+#one time: install yeoman & this generator
+npm i -g yo
+npm install -g generator-node-mongo-web-server 
+
+
+#starting 
+yo node-mongo-web-server
+cd node-mongo-web-server
 npm install
 sudo npm run setup
 ```
@@ -82,14 +86,3 @@ SSH+HTTP: Settings>Network>Adapter 1> Attached to: NAT, Advanced > Port Forwardi
 
 Shared Folders: so you can develop in a real IDE   first install VBox Guest Additions: Devices>Insert Guest Addition iso, then sudo mount /dev/cdrom /media/cdrom && sudo /media/cdrom/VBoxLinuxAdditions.run, next shutdown and Settings>Shared Folders>Add folder with local path and share_name and Auto-mount. Then boot the vm and shared folder is at /media/sf_[share_name] but you can change mount point: sudo mkdir [/path/new/mount/point] && sudo mount -t vboxsf [share_name] [/path/new/mount/point] 
 
-
-### Programs
-[Atom](https://atom.io/)
-[Node.js](https://nodejs.org/download/)
-[MongoDB](https://www.mongodb.org/downloads)
-[Postman (Chrome)](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm)
-[Hyperterm](http://hyper.is/)
-[Sublime](http://www.sublimetext.com/3)
-[(Sublime Packages)](https://packagecontrol.io/installation)
-[Sublime](http://www.sublimetext.com/3)
-[(Sublime Packages)](https://packagecontrol.io/installation)
