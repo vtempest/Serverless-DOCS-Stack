@@ -10,8 +10,7 @@
 
 ```
 #one time: install yeoman & this generator
-npm i -g yo
-npm install -g generator-node-mongo-web-server 
+npm i -g yo generator-node-mongo-web-server 
 
 
 #starting 
