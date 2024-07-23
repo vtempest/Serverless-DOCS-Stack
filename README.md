@@ -1,87 +1,52 @@
-## Starter Node Web App 
+##  Serverless DOCS Stack 
 
-- Nodejs [express](http://expressjs.com/4x/api.html) server with minimal files 
-- [mongoose](http://mongoosejs.com/docs/guide.html) for mongodb & [mongo-express](https://github.com/andzdroid/mongo-express) for admin
-- [EJS](https://github.com/mde/ejs) templating & [Jquery](https://learn.jquery.com/using-jquery-core/) & [Bootstrap](http://getbootstrap.com/components/) interface 
-- Google & FB login with [passport](http://passportjs.org/docs/overview)
+### [Live Demo](https://serverless-docs-stack.vtempest.workers.dev)
 
+### ⚒️ Drizzle OAuth Cloudflare Svelte 
 
-## Setup
+📚 [Drizzle ORM](https://orm.drizzle.team/kit-docs/quick) - lightweight ORM compatible with Cloudflare D1 and drizzle-kit  to manage schema migrations
 
-```
-#one time: install yeoman & this generator
-npm i -g yo generator-node-mongo-web-server 
+👤 [OAuth Lucia](https://github.com/lucia-auth/lucia) - Google oAuth sign-in and/or email signup via Resend mailer api, with 4 email templates: reset password, change email, verify email, welcome. Settings and admin panel for users.
 
+☁️ [Cloudflare for Svelte](https://developers.cloudflare.com/pages/framework-guides/deploy-a-svelte-site/) - serverless autoscaling API and D1 database, great hosting platform with free tier
 
-#starting 
-yo node-mongo-web-server
-cd node-mongo-web-server
-npm install
-sudo npm run setup
-```
-To setup db admin password and change port from localhost:8081 ```vi node_modules/mongo-express/config.js```
-Register your app for [Google Developer](https://console.developers.google.com/project) or [Facebook Developer](https://developers.facebook.com/) and put the keys and callbacks in the auth.js file to make logins work.
+🖼️ [SvelteKit](https://github.com/sveltejs/kit) - full stack interface and API routes framework
 
-On linux run ```sudo npm run mongo``` to start database, enter for new line or new console, then run ```sudo npm start``` to start server forever, with auto-restarts on file changes, and with auto-refresh on pages with the line of code from head.ejs. Output logs to console, but press enter to use the window for more commands (or use ```screen``` for new console screens and Ctrl+A+D to detach and ```screen -r``` # to retach.) 
+### 🧩 Interface Components:
 
-Ubuntu Server first time setup: ```sudo apt-add-repository multiverse && sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get install -y nodejs npm nodejs-legacy libkrb5-dev mongodb screen openssh-server build-essential python git unzip unrar```
+🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) + [Bits UI](https://github.com/huntabyte/bits-ui) + [shadcn-svelte](https://github.com/huntabyte/shadcn-svelte) - popular UI components which can be AI-generated at [v0.dev](https://v0.dev)
+
+📝 [formsnap](https://github.com/svecosystem/formsnap) + [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) + [zod](https://github.com/colinhacks/zod) - form validation
+
+📱 [lucide](https://github.com/lucide-icons/lucide) -  icons
+
+🛣️ [vite-plugin-kit-routes](https://github.com/jycouet/kitql/tree/main/packages/vite-plugin-kit-routes) - url routes
+
+🌲 [pino](https://github.com/pinojs/pino) - logging
 
 
-Setup your server shell with useful shortcuts for updating and searching your files with [this zshrc](https://github.com/gulakov/awesome-zsh).
+### Sreenshots
 
+<img width="200px" src="https://i.imgur.com/jIaL6yP.png" />
 
-## Git 
+<img  width="200px" src="https://i.imgur.com/NlkjlWI.png" />
 
-```
-git config --global user.name "Your Name"
-git config --global user.email yourname@example.com
+### ⬇️ Installation
 
-ssh-keygen -t rsa -C "yourname@example.com"
-cat ~/.ssh/id_rsa.pub
-```
-copy from this console into a new key https://github.com/settings/ssh
-now create a new git repo https://github.com/new
-```
-cd /path/to/site
-git init && git add * && git commit -a -m "init"
-git remote add origin git@github.com:yourname/repo.com.git
-git push -u -f origin master
-```
-
-
-### AWS
-
-Create a free-tier ubuntu server, download key, and login from your computer:
-```ssh -i /path/to/your/Awskey.pem ubuntu@##.##.##.##``` 
-
-
-```sudo adduser alex```
-Set a password
-
-```sudo visudo```
-Add this line
-```alex ALL=NOPASSWD:ALL```
-Beneath the root ALL=(ALL):ALL line, and ctrl x to exit and enter y to save
-
-```sudo nano /etc/ssh/sshd_config```
-Find this line and modify it to say yes:  PasswordAuthentication yes 
-Then exit and save with ctrl+x and press y to save
-
-```sudo service ssh restart```
-Now you can login as ssh alex@##.##.##.##.##
-
-Open ports:
-In the AWS EC2 Instance console, make sure the security group assigned to your instance has under the inbound tab port 80 HTTP enabled. Only port 22 is open by default. Find out your security group name listed when you click on your instance, then go to the Security Groups link on the sidebar of ec2 and modify that security group by clicking on it, inbound tab, edit, add rule, select http. Now when you click on your ec2 instance it shows a public URL like this ec2-54-85-204-200.compute-1.amazonaws.com
-
-
-Domain:
-Go to your ec2 manager and click elastic IPs on the sidebar, Allocate a new address, then associate address and select your running instance to be associated with that address. Now go to Route 53 under the aws console dropdown and click Create Hosted Zone, name it your site's name .com, then go to record sets, create record set Type: A with the Value of the Elastic IP you got before. Now copy the Name Server values, which look like ns-1877.awsdns-42.co.uk. ns-1149.awsdns-15.org. ns-923.awsdns-51.net. ns-216.awsdns-27.com. and paste those into your DNS registrar's settings for custom DNS.
-
-
-### VirtualBox 
-To develop on a local virtual machine server, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Ubuntu Server](http://www.ubuntu.com/download/server). Settings>Storage>Add Optical Drive> Select ubuntu iso and check Live CD. System>MotherBoard and System>Processor, allocate more RAM and CPU cores for speed. 
-
-SSH+HTTP: Settings>Network>Adapter 1> Attached to: NAT, Advanced > Port Forwarding > Host IP 127.0.0.1 : 22 to Guest IP 10.0.2.15 : 22 and so the vm can serve http pages and see in browser at localhost:[port], also add  127.0.0.1 : 80 (or other port) to Guest IP 10.0.2.15 : 80. Now you can Shift+Click "Start" ro run vm in background and ssh [vm user name]@localhost. You can also add your virtualbox to path and create a shortcut script to start vm from command line:  VBoxManage startvm "ubuntu server" --type headless
-
-Shared Folders: so you can develop in a real IDE   first install VBox Guest Additions: Devices>Insert Guest Addition iso, then sudo mount /dev/cdrom /media/cdrom && sudo /media/cdrom/VBoxLinuxAdditions.run, next shutdown and Settings>Shared Folders>Add folder with local path and share_name and Auto-mount. Then boot the vm and shared folder is at /media/sf_[share_name] but you can change mount point: sudo mkdir [/path/new/mount/point] && sudo mount -t vboxsf [share_name] [/path/new/mount/point] 
+1. Install prerequisites Node.js or Bun `curl -fsSL https://bun.sh/install | bash`
+2. Clone to localhost or server `git clone https://github.com/vtempest/docs-stack-starter`
+3. `mv .env.example .env` and set the domain and API keys in `.env` 
+4. Auth providers, get id/secret from [Google](https://console.cloud.google.com/apis/credentials) 
+5. Set OAuth origin `http://localhost` and `http://localhost:5173` on local or `https://domain.com` on server
+6. Set redirect `http://localhost:5173/auth/oauth/google/callback` or `https://api.domain.com/auth/oauth/google/callback`
+7. For email auth, get API from [Resend](https://resend.com/api-keys) mailer and verify domain
+8. Log in with your Cloudflare account by running: `bunx wrangler login`
+9. Create your D1 database via dashboard or with `bunx wrangler d1 create my-db-prod`
+10. Copy the console output database_name and database_id
+11. Go to `wrangler.toml` and change `database_name` and `database_id`.
+12. Go to `drizzle.config.ts` and change db name in `dbName`.
+13. Go to `package.json` and change db name in `db:push:*`.
+14. Generate and migrate the schema to dev or prod db: `bun run db:migrate; bun run db:push:dev; bun run db:push:prod`
+15. Develop on local with `bun run dev` 
+16. Deploy to prod  with `bun run deploy` 
 

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="%paraglide.lang%" dir="%paraglide.textDirection%">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "%sveltekit.env.PUBLIC_CLOUDFLARE_ANALYTICS_KEY%"}'
+    ></script>
+  </body>
+</html>

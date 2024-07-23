@@ -1,0 +1,12 @@
+<script lang="ts">
+  import type { SVGAttributes } from "svelte/elements";
+
+  type $$Props = SVGAttributes<SVGElement>;
+</script>
+
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" {...$$restProps}>
+  <rect width="9.63139" height="40.8516" rx="4.8157" transform="matrix(0.873028 0.48767 -0.497212 0.867629 43.4805 67.3037)" fill="#C5F74F"></rect>
+  <rect width="9.63139" height="40.8516" rx="4.8157" transform="matrix(0.873028 0.48767 -0.497212 0.867629 76.9395 46.5342)" fill="#C5F74F"></rect>
+  <rect width="9.63139" height="40.8516" rx="4.8157" transform="matrix(0.873028 0.48767 -0.497212 0.867629 128.424 46.5352)" fill="#C5F74F"></rect>
+  <rect width="9.63139" height="40.8516" rx="4.8157" transform="matrix(0.873028 0.48767 -0.497212 0.867629 94.957 67.3037)" fill="#C5F74F"></rect>
+</svg>

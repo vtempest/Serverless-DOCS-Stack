@@ -1,0 +1,91 @@
+[2024-06-13T13:23:44.076Z] info  code-server 4.89.1 effc6e95b4ad1c5ac5f9083ec06663ba4a2e005c
+[2024-06-13T13:23:44.077Z] info  Using user-data-dir /home/alex/.local/share/code-server
+[2024-06-13T13:23:44.167Z] info  Using config file /home/alex/.config/code-server/config.yaml
+[2024-06-13T13:23:44.167Z] info  HTTP server listening on http://0.0.0.0:8080/
+[2024-06-13T13:23:44.167Z] info    - Authentication is disabled
+[2024-06-13T13:23:44.167Z] info    - Not serving HTTPS
+[2024-06-13T13:23:44.167Z] info  Session server listening on /home/alex/.local/share/code-server/code-server-ipc.sock
+[06:23:56] 
+
+
+
+
+[06:23:57] Extension host agent started.
+File not found: /usr/lib/code-server/lib/vscode/out/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/out/vsda.js
+[06:24:03] [127.0.0.1][153ae81d][ManagementConnection] New connection established.
+[06:24:05] [127.0.0.1][aeacf72b][ExtensionHostConnection] New connection established.
+[06:24:09] [127.0.0.1][aeacf72b][ExtensionHostConnection] <11367> Launched Extension Host Process.
+[06:29:58] [127.0.0.1][aeacf72b][ExtensionHostConnection] The client has reconnected.
+[06:29:58] [127.0.0.1][153ae81d][ManagementConnection] The client has reconnected.
+[06:41:18] [127.0.0.1][153ae81d][ManagementConnection] The client has reconnected.
+[06:41:19] [127.0.0.1][aeacf72b][ExtensionHostConnection] The client has reconnected.
+[06:51:23] Getting Manifest... svelte.svelte-vscode
+[06:51:24] Getting Manifest... svelte.svelte-vscode-nightly
+[06:51:27] Installing extension: svelte.svelte-vscode-nightly
+[06:51:27] Installing extension: svelte.svelte-vscode
+[06:52:42] Could not load vsce-sign module Cannot find module '@vscode/vsce-sign'
+Require stack:
+- /usr/lib/code-server/lib/vscode/out/bootstrap-amd.js
+- /usr/lib/code-server/out/node/util.js
+- /usr/lib/code-server/out/node/cli.js
+- /usr/lib/code-server/out/node/entry.js
+[06:52:42] Extension signature verification is not done: svelte.svelte-vscode
+[06:53:07] Extracted extension to file:///home/alex/.local/share/code-server/extensions/svelte.svelte-vscode-108.5.0-universal: svelte.svelte-vscode
+[06:53:07] Renamed to /home/alex/.local/share/code-server/extensions/svelte.svelte-vscode-108.5.0-universal
+[06:53:07] Extracting extension completed. svelte.svelte-vscode
+[06:53:08] Extension installed successfully: svelte.svelte-vscode
+[06:54:32] Could not load vsce-sign module Cannot find module '@vscode/vsce-sign'
+Require stack:
+- /usr/lib/code-server/lib/vscode/out/bootstrap-amd.js
+- /usr/lib/code-server/out/node/util.js
+- /usr/lib/code-server/out/node/cli.js
+- /usr/lib/code-server/out/node/entry.js
+[06:54:32] Extension signature verification is not done: svelte.svelte-vscode-nightly
+[06:54:35] No ptyHost heartbeat after 6 seconds
+[06:55:10] Getting Manifest... fivethree.vscode-svelte-snippets
+[06:55:12] Installing extension: fivethree.vscode-svelte-snippets
+[06:55:32] Could not load vsce-sign module Cannot find module '@vscode/vsce-sign'
+Require stack:
+- /usr/lib/code-server/lib/vscode/out/bootstrap-amd.js
+- /usr/lib/code-server/out/node/util.js
+- /usr/lib/code-server/out/node/cli.js
+- /usr/lib/code-server/out/node/entry.js
+[06:55:32] Extension signature verification is not done: fivethree.vscode-svelte-snippets
+[06:55:34] Extracted extension to file:///home/alex/.local/share/code-server/extensions/fivethree.vscode-svelte-snippets-0.5.0-universal: fivethree.vscode-svelte-snippets
+[06:55:35] Renamed to /home/alex/.local/share/code-server/extensions/fivethree.vscode-svelte-snippets-0.5.0-universal
+[06:55:35] Extracting extension completed. fivethree.vscode-svelte-snippets
+[06:55:36] Extension installed successfully: fivethree.vscode-svelte-snippets
+[06:56:46] Extracted extension to file:///home/alex/.local/share/code-server/extensions/svelte.svelte-vscode-nightly-99.1.43-universal: svelte.svelte-vscode-nightly
+[06:56:47] Renamed to /home/alex/.local/share/code-server/extensions/svelte.svelte-vscode-nightly-99.1.43-universal
+[06:56:47] Extracting extension completed. svelte.svelte-vscode-nightly
+[06:56:48] Extension installed successfully: svelte.svelte-vscode-nightly
+[2024-06-13T14:11:24.707Z] info  code-server 4.89.1 effc6e95b4ad1c5ac5f9083ec06663ba4a2e005c
+[2024-06-13T14:11:24.746Z] info  Using user-data-dir /home/alex/.local/share/code-server
+[2024-06-13T14:11:24.940Z] info  Using config file /home/alex/.config/code-server/config.yaml
+[2024-06-13T14:11:24.940Z] info  HTTP server listening on http://0.0.0.0:8080/
+[2024-06-13T14:11:24.940Z] info    - Authentication is disabled
+[2024-06-13T14:11:24.940Z] info    - Not serving HTTPS
+[2024-06-13T14:11:24.942Z] info  Session server listening on /home/alex/.local/share/code-server/code-server-ipc.sock
+[08:20:16] 
+
+
+
+
+[08:20:16] Extension host agent started.
+File not found: /usr/lib/code-server/lib/vscode/out/vsda.js
+File not found: /usr/lib/code-server/lib/vscode/out/vsda_bg.wasm
+[08:20:20] [127.0.0.1][c1b69369][ManagementConnection] New connection established.
+[08:20:26] [127.0.0.1][c1b69369][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[08:20:26] [127.0.0.1][35b9ae97][ExtensionHostConnection] New connection established.
+[08:20:27] [127.0.0.1][9e016448][ExtensionHostConnection] New connection established.
+[08:20:30] [127.0.0.1][35b9ae97][ExtensionHostConnection] <1278> Launched Extension Host Process.
+[08:20:30] [127.0.0.1][9e016448][ExtensionHostConnection] <1284> Launched Extension Host Process.
+File not found: /usr/lib/code-server/lib/vscode/out/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/out/vsda.js
+[08:20:31] [127.0.0.1][6493ab4a][ManagementConnection] New connection established.
+[08:20:33] [127.0.0.1][6bf3cd0e][ExtensionHostConnection] New connection established.
+[08:20:33] [127.0.0.1][6bf3cd0e][ExtensionHostConnection] <1306> Launched Extension Host Process.
+[08:21:32] No ptyHost heartbeat after 6 seconds
+[08:25:39] [127.0.0.1][35b9ae97][ExtensionHostConnection] <1278> Extension Host Process exited with code: 0, signal: null.
+[08:25:39] [127.0.0.1][9e016448][ExtensionHostConnection] <1284> Extension Host Process exited with code: 0, signal: null.
