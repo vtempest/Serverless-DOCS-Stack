@@ -27,15 +27,15 @@
 
 ### Sreenshots
 
-<img width="200px" src="https://i.imgur.com/jIaL6yP.png" />
+<img width="600px" src="https://i.imgur.com/jIaL6yP.png" />
 
-<img  width="200px" src="https://i.imgur.com/NlkjlWI.png" />
+<img  width="600px" src="https://i.imgur.com/NlkjlWI.png" />
 
 ### ⬇️ Installation
 
 1. Install prerequisites Node.js or Bun `curl -fsSL https://bun.sh/install | bash`
 2. Clone to localhost or server `git clone https://github.com/vtempest/docs-stack-starter`
-3. `mv .env.example .env` and set the domain and API keys in `.env` 
+3. `mv .env.example .env ; mv wrangler.example.toml wrangler.toml` and set the domain and API keys in `.env` 
 4. Auth providers, get id/secret from [Google](https://console.cloud.google.com/apis/credentials) 
 5. Set OAuth origin `http://localhost` and `http://localhost:5173` on local or `https://domain.com` on server
 6. Set redirect `http://localhost:5173/auth/oauth/google/callback` or `https://api.domain.com/auth/oauth/google/callback`
