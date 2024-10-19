@@ -47,7 +47,7 @@
 12. Copy the console output database_name and database_id
 13. Go to `wrangler.toml` and change `database_name` and `database_id`.
 14. Go to `drizzle.config.ts` and change db name in `dbName`.
-15. Go to `package.json` and change db name in `db:push:*`.
+15. Go to `package.json` and change db name in `db:push:*` and `db:backup:prod`.
 16. Generate and migrate the schema to dev or prod db: `bun run db:migrate; bun run db:push:dev; bun run db:push:prod`
 17. Develop on local with `bun run dev` 
 18. Deploy to prod  with `bun run deploy` 
