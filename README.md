@@ -33,22 +33,21 @@
 
 ### ⬇️ Installation
 
-1. Install prerequisites Node.js or Bun `curl -fsSL https://bun.sh/install | bash`
-2. Clone to localhost or server `git clone https://github.com/vtempest/docs-stack-starter`
-3. CD to project directory `cd docs-stack-starter`
-4. Install dependencies `bun install`
-5. `mv .env.example .env ; mv wrangler.example.toml wrangler.toml` and set the domain and API keys in `.env` 
-6. Auth providers, get id/secret from [Google](https://console.cloud.google.com/apis/credentials) 
-7. Set OAuth origin `http://localhost` and `http://localhost:5173` on local or `https://domain.com` on server
-8. Set redirect `http://localhost:5173/auth/oauth/google/callback` or `https://api.domain.com/auth/oauth/google/callback`
-9. For email auth, get API from [Resend](https://resend.com/api-keys) mailer and verify domain
-10. Log in with your Cloudflare account by running: `bunx wrangler login`
-11. Create your D1 database via dashboard or with `bunx wrangler d1 create my-db-prod`
-12. Copy the console output database_name and database_id
+1. Install prerequisites Node.js or Bun `curl -fsSL https://bun.sh/install | bash`.
+2. Clone to localhost or server `git clone https://github.com/vtempest/docs-stack-starter`.
+3. CD to project directory `cd docs-stack-starter`.
+4. Install dependencies `bun install`.
+5. `mv .env.example .env ; mv wrangler.example.toml wrangler.toml` and set the domain and API keys in `.env`.
+6. Auth providers, get id/secret from [Google](https://console.cloud.google.com/apis/credentials).
+7. Set OAuth origin `http://localhost` and `http://localhost:5173` on local or `https://domain.com` on server.
+8. Set redirect `http://localhost:5173/auth/oauth/google/callback` or `https://api.domain.com/auth/oauth/google/callback`.
+9. For email auth, get API from [Resend](https://resend.com/api-keys) mailer and verify domain.
+10. Log in with your Cloudflare account by running: `bunx wrangler login`.
+11. Create your D1 database via dashboard or with `bunx wrangler d1 create my-db-prod`.
+12. Copy the console output database_name and database_id.
 13. Go to `wrangler.toml` and change `database_name` and `database_id`.
 14. Go to `drizzle.config.ts` and change db name in `dbName`.
 15. Go to `package.json` and change db name in `db:push:*` and `db:backup:prod`.
-16. Generate and migrate the schema to dev or prod db: `bun run db:migrate; bun run db:push:dev; bun run db:push:prod`
-17. Develop on local with `bun run dev` 
-18. Deploy to prod  with `bun run deploy` 
-
+16. Generate and migrate the schema to dev or prod db: `bun run db:migrate; bun run db:push:dev; bun run db:push:prod`.
+17. Develop on local with `bun run dev`.
+18. Deploy to prod  with `bun run deploy`.
