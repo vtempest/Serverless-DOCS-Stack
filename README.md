@@ -1,8 +1,23 @@
-##  Serverless DOCS Stack 
+<p align="center">
+    <img width="350px" src="https://i.imgur.com/6r83blS.png">
+</p>
+<p align="center">
+    <a href="https://github.com/vtempest/Serverless-DOCS-Stack/discussions">
+    <img alt="GitHub Discussions"
+        src="https://img.shields.io/github/discussions/vtempest/Serverless-DOCS-Stack">
+    </a>
+    <a href="http://makeapullrequest.com">
+        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+    </a>
+    <a href="https://codespaces.new/vtempest/Serverless-DOCS-Stack">
+    <img src="https://github.com/codespaces/badge.svg" width="150" height="20">
+    </a>
+</p>
+<h3 align="center">
+  <a href="https://serverless-docs-stack.vtempest.workers.dev">Live Demo </a>
+</h3>
 
-### [Live Demo](https://serverless-docs-stack.vtempest.workers.dev)
-
-### ⚒️ Drizzle OAuth Cloudflare Svelte 
+### ⚒️ Serverless DOCS Stack: Drizzle OAuth Cloudflare Svelte 
 
 📚 [Drizzle ORM](https://orm.drizzle.team/kit-docs/quick) - lightweight ORM compatible with Cloudflare D1 and drizzle-kit  to manage schema migrations
 
