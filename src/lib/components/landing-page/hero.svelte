@@ -1,7 +1,6 @@
 <script lang="ts">
   import ChevronRight from "lucide-svelte/icons/chevron-right";
   import { Button } from "$components/ui/button";
-  import { GitHub, Drizzle, Svelte, Tailwind, Cloudflare, Shacdn, TypeScript, Pnpm, Superforms } from "$components/icons";
   import { route } from "$lib/ROUTES";
   import { APP_NAME } from "$configs/general";
 

@@ -4,18 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "vite dev",
+    "serve": "wrangler deploy && wrangler tail",
     "build": " vite build",
     "preview": " vite preview",
-    "deploy": "wrangler deploy && wrangler tail",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --check . && eslint .",
-    "format": "prettier --write .",
     "db:migrate": "drizzle-kit generate",
-    "db:push:dev": "wrangler d1 migrations apply serverless-docs-db --local",
-    "db:push:prod": "wrangler d1 migrations apply  serverless-docs-db --remote",
+    "db:push:dev": "wrangler d1 migrations apply my-db-prod --local",
+    "db:push:prod": "wrangler d1 migrations apply  my-db-prod --remote",
     "db:studio": "ENV=prod drizzle-kit studio",
-    "db:backup:prod": "wrangler d1 export serverless-docs-db --output backup-prod.sql --remote",
+    "db:backup:prod": "wrangler d1 export my-db-prod --output backup-prod.sql --remote",
     "test": "vitest"
   },
   "devDependencies": {

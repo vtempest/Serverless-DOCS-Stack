@@ -31,7 +31,7 @@ if (isDev) {
 } else {
   dbCredentials = {
     wranglerConfigPath: "wrangler.toml",
-    dbName: "serverless-docs-db"
+    dbName: "my-db-prod"
   };
 }
 

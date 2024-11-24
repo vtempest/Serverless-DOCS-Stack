@@ -38,8 +38,11 @@ export const GET: RequestHandler = async ({ cookies, url, locals: { db, lucia } 
   }
 
   try {
+    console.log("22", code, codeVerifierCookie)
+    
     const tokens = await googleOauth.validateAuthorizationCode(code, codeVerifierCookie);
 
+    console.log("1111" + tokens.accessToken)
     const googleUserResponse = await fetch("https://openidconnect.googleapis.com/v1/userinfo", {
       headers: {
         Authorization: `Bearer ${tokens.accessToken}`
@@ -47,6 +50,7 @@ export const GET: RequestHandler = async ({ cookies, url, locals: { db, lucia } 
     });
 
     const googleUser = (await googleUserResponse.json()) as GoogleUser;
+    console.log("444", googleUser)
 
     if (!googleUser.email) {
       error(400, "No primary email address");

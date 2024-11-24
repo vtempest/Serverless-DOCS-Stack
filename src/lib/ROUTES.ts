@@ -9,14 +9,6 @@
  * PAGES
  */
 const PAGES = {
-  "/admin": `/admin`,
-  "/admin/customers": `/admin/customers`,
-  "/admin/customers/[userId=userId]": (params: { userId: Parameters<typeof import("../params/userId.ts").match>[0] }) => {
-    return `/admin/customers/${params.userId}`;
-  },
-  "/admin/orders": `/admin/orders`,
-  "/admin/products": `/admin/products`,
-  "/admin/settings": `/admin/settings`,
   "/app/billing": `/app/billing`,
   "/app/dashboard": `/app/dashboard`,
   "/app/profile": `/app/profile`,
@@ -58,8 +50,6 @@ const SERVERS = {
  * ACTIONS
  */
 const ACTIONS = {
-  "deleteUser /admin/customers": `/admin/customers?/deleteUser`,
-  "updateUser /admin/customers": `/admin/customers?/updateUser`,
   "default /app/settings/account": `/app/settings/account`,
   "default /app/settings/notifications": `/app/settings/notifications`,
   "default /app/settings/profile": `/app/settings/profile`,
@@ -200,12 +190,6 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
  */
 export type KIT_ROUTES = {
   PAGES: {
-    "/admin": never;
-    "/admin/customers": never;
-    "/admin/customers/[userId=userId]": "userId";
-    "/admin/orders": never;
-    "/admin/products": never;
-    "/admin/settings": never;
     "/app/billing": never;
     "/app/dashboard": never;
     "/app/profile": never;
@@ -233,8 +217,6 @@ export type KIT_ROUTES = {
     "GET /auth/oauth/google/callback": never;
   };
   ACTIONS: {
-    "deleteUser /admin/customers": never;
-    "updateUser /admin/customers": never;
     "default /app/settings/account": never;
     "default /app/settings/notifications": never;
     "default /app/settings/profile": never;
@@ -263,5 +245,5 @@ export type KIT_ROUTES = {
     drizzle: never;
     lucia: never;
   };
-  Params: { userId: never; redirectTo: never };
+  Params: { redirectTo: never; userId: never };
 };
