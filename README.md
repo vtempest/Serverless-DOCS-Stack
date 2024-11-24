@@ -29,13 +29,13 @@
 
 ### 🧩 Interface Components:
 
-- 🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) + [Bits UI](https://github.com/huntabyte/bits-ui) + [shadcn-svelte](https://github.com/huntabyte/shadcn-svelte) - popular UI components, with demos like [Sidebar examples](https://next.shadcn-svelte.com/blocks) and 
+- 🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) + [Bits UI](https://github.com/huntabyte/bits-ui) 
+    + [shadcn-svelte](https://github.com/huntabyte/shadcn-svelte) - popular UI components, with demos like [Sidebar examples](https://next.shadcn-svelte.com/blocks) and  [Magic UI Animations](https://animation-svelte.vercel.app/magic)
+
 
 - 📝 [formsnap](https://github.com/svecosystem/formsnap) + [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) + [zod](https://github.com/colinhacks/zod) - forms with Zod validation and [rate-limiting](https://github.com/ciscoheat/sveltekit-rate-limiter) in server-memory 
 
 - 📱 [lucide](https://github.com/lucide-icons/lucide) -  icons
-
-- 🌈 [Magic UI Animations](https://animation-svelte.vercel.app/magic)
 
 - 🛣️ [vite-plugin-kit-routes](https://github.com/jycouet/kitql/tree/main/packages/vite-plugin-kit-routes) - url routes
 
@@ -60,7 +60,7 @@
 
 ### ⬇️ Installation
 
-1. Install prerequisites Node.js or Bun `curl -fsSL https://bun.sh/install | bash`. Setup shell with dev tools like nvim, fish, system info with [Server-Shell-Setup](https://github.com/vtempest/Server-Shell-Setup)
+1. Install prerequisites Node.js or Bun `curl -fsSL https://bun.sh/install | bash`.  Optional: Setup shell with dev tools like nvim, fish, system info with [Server-Shell-Setup](https://github.com/vtempest/Server-Shell-Setup)
 2. Clone to localhost or server `git clone https://github.com/vtempest/Serverless-DOCS-Stack`.
 3. CD to project directory `cd docs-stack-starter`.
 4. Install dependencies `bun install`.
@@ -68,7 +68,7 @@
 6. Auth providers, get id/secret from [Google](https://console.cloud.google.com/apis/credentials).
 7. Set OAuth origin `http://localhost` and `http://localhost:5173` on local or `https://domain.com` on server.
 8. Set redirect `http://localhost:5173/auth/oauth/google/callback` or `https://api.domain.com/auth/oauth/google/callback`.
-9. For email auth, get API from [Resend](https://resend.com/api-keys) mailer and verify domain.
+9. Optional: For email auth, get API from [Resend](https://resend.com/api-keys) mailer and verify domain.
 10. Log in with your Cloudflare account by running: `bunx wrangler login`.
 11. Create your D1 database via dashboard or with `bunx wrangler d1 create my-db-prod`.
 12. Copy the console output database_name and database_id.
@@ -78,5 +78,8 @@
 16. Generate and migrate the schema to dev or prod db: `bun run db:migrate; bun run db:push:dev; bun run db:push:prod`.
 17. Develop on local with `bun dev`.
 18. Deploy to prod  with `bun serve`.
-19. Add-to-Home on Mobile Web: Design logo and generate icons for  with [PWA Asset Generator](https://github.com/elegantapp/pwa-asset-generator) or [Favicon.io](https://favicon.io)
-20. User Analytics: Get Google Analytics ID from [Google Analytics](https://support.google.com/analytics/answer/9539598?hl=en) or [SimpleAnalytics](https://www.simpleanalytics.com) and add to `app.html`.
+
+19. Domain: [Cloudflare Dashboard](https://dash.cloudflare.com) -> Workers and Pages -> [your worker name] -> Settings 
+20. Add-to-Home on Mobile Web: Design logo and generate icons for  with [PWA Asset Generator](https://github.com/elegantapp/pwa-asset-generator) or [Favicon.io](https://favicon.io)
+21. User Analytics: Get Google Analytics ID from [Google Analytics](https://support.google.com/analytics/answer/9539598?hl=en) or [SimpleAnalytics](https://www.simpleanalytics.com) and add to `app.html`.
+22. Email Forwarding: Setup [Cloudflare Email Routing](https://blog.cloudflare.com/introducing-email-routing/) and [GMail's Send From Verification](https://support.google.com/mail/answer/22370?hl=en)
