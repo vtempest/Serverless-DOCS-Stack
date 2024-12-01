@@ -25,13 +25,12 @@
 
 - ☁️ [Cloudflare for Svelte](https://developers.cloudflare.com/pages/framework-guides/deploy-a-svelte-site/) - serverless autoscaling API and D1 database, great hosting platform with free tier
 
-- 🖼️ [SvelteKit](https://github.com/sveltejs/kit) - full stack interface and API routes framework
+- 🖼️ [SvelteKit](https://github.com/sveltejs/kit) - full stack interface and API routes framework. Many developers prefer [Svelte over React](https://shakuro.com/blog/svelte-vs-react).
 
 ### 🧩 Interface Components:
 
-- 🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) + [Bits UI](https://github.com/huntabyte/bits-ui) 
-    + [shadcn-svelte](https://github.com/huntabyte/shadcn-svelte) - popular UI components, with demos like [Sidebar examples](https://next.shadcn-svelte.com/blocks) and  [Magic UI Animations](https://animation-svelte.vercel.app/magic)
-
+- 🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) + [Bits UI](https://github.com/huntabyte/bits-ui) +
+ [shadcn-svelte](https://github.com/huntabyte/shadcn-svelte) - popular UI components, with demos like [Sidebar examples](https://next.shadcn-svelte.com/blocks) and  [Magic UI Animations](https://animation-svelte.vercel.app/magic)
 
 - 📝 [formsnap](https://github.com/svecosystem/formsnap) + [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) + [zod](https://github.com/colinhacks/zod) - forms with Zod validation and [rate-limiting](https://github.com/ciscoheat/sveltekit-rate-limiter) in server-memory 
 
@@ -43,14 +42,7 @@
 
 - ✅ [Vitest](https://vitest.dev/guide/ui) - unit testing web UI
 
-
-### ⭐ Interface Alternatives & Extras
-
-- [List of Svelte Libraries](https://github.com/TheComputerM/awesome-svelte#ui-libraries)
-- [Svelte Material UI](https://sveltematerialui.com/INSTALL.md)
-- [SkeletonUI](https://www.skeleton.dev/components/app-rail)
-- [Flowbite](https://flowbite-svelte.com/docs/pages/introduction)
-- [Icon sets](https://www.svgrepo.com/collections)
+- ⭐ *Extra Alternatives*: [List of Svelte Libraries](https://github.com/TheComputerM/awesome-svelte#ui-libraries), [Material UI](https://sveltematerialui.com/INSTALL.md),  [SkeletonUI](https://www.skeleton.dev/components/app-rail), [Flowbite](https://flowbite-svelte.com/docs/pages/introduction),  [Icon sets](https://www.svgrepo.com/collections)
 
 ### Sreenshots
 
@@ -61,7 +53,8 @@
 ### ⬇️ Installation
 
 1. Install prerequisites Node.js or Bun `curl -fsSL https://bun.sh/install | bash`.  Optional: Setup shell with dev tools like nvim, fish, system info with [Server-Shell-Setup](https://github.com/vtempest/Server-Shell-Setup)
-2. Clone to localhost or server `git clone https://github.com/vtempest/Serverless-DOCS-Stack`.
+2. Clone to localhost or server `git clone https://github.com/vtempest/Serverless-DOCS-Stack`. 
+    Optional: Press `.` when on the Github repo page to fork and run in Github Workspaces.
 3. CD to project directory `cd docs-stack-starter`.
 4. Install dependencies `bun install`.
 5. `mv .env.example .env ; mv wrangler.example.toml wrangler.toml` and set the domain and API keys in `.env`.
