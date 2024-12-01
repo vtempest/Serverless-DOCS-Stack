@@ -1,17 +1,19 @@
-<!doctype html>
-<html lang="%paraglide.lang%" dir="%paraglide.textDirection%">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    %sveltekit.head%
-  </head>
-  <body data-sveltekit-preload-data="hover">
-    <div style="display: contents">%sveltekit.body%</div>
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "%sveltekit.env.PUBLIC_CLOUDFLARE_ANALYTICS_KEY%"}'
-    ></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>%sveltekit.title%</title>
+  %sveltekit.head%
+  <!-- Mobile-Web Add-to-Home -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Google Analytics -->
+  <!-- SimpleAnalytics.com -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+</head>
+<body>
+  <div>%sveltekit.body%</div>
+</body>
 </html>
