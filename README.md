@@ -2,7 +2,7 @@
 
 ![GitHub Discussions](https://img.shields.io/github/discussions/vtempest/Serverless-DOCS-Stack)![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)![](https://github.com/codespaces/badge.svg)
 
-### [Live Demo](https://serverless-docs-stack.vtempest.workers.dev) 
+### 🎮[Live Demo](https://serverless-docs-stack.vtempest.workers.dev)   📑[Files & Functions Docs](https://vtempest.github.io/Serverless-DOCS-Stack/)
 
 ### ⚒️ Serverless DOCS Stack: Drizzle OAuth Cloudflare Svelte
 
@@ -14,7 +14,7 @@
 
 🖼️ [SvelteKit](https://github.com/sveltejs/kit) - full stack interface and API routes framework. Many developers prefer [Svelte over React](https://shakuro.com/blog/svelte-vs-react).
 
-### 🧩 Interface Components:
+### 🧩 Interface Components
 
 🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) + [Bits UI](https://github.com/huntabyte/bits-ui) +  
 [shadcn-svelte](https://github.com/huntabyte/shadcn-svelte) - popular UI components, with demos like [Sidebar examples](https://next.shadcn-svelte.com/blocks) and [Magic UI Animations](https://animation-svelte.vercel.app/magic)
@@ -29,7 +29,7 @@
 
 ✅ [Vitest](https://vitest.dev/guide/ui) - unit testing web UI
 
-⭐ _Extra Alternatives_: [List of Svelte Libraries](https://github.com/TheComputerM/awesome-svelte#ui-libraries), [Material UI](https://sveltematerialui.com/INSTALL.md), [SkeletonUI](https://www.skeleton.dev/components/app-rail), [Flowbite](https://flowbite-svelte.com/docs/pages/introduction), [Icon sets](https://www.svgrepo.com/collections)
+⭐ _Extras & Alternatives_: [List of Svelte Libraries](https://github.com/TheComputerM/awesome-svelte#ui-libraries), [Material UI](https://sveltematerialui.com/INSTALL.md), [SkeletonUI](https://www.skeleton.dev/components/app-rail), [Flowbite](https://flowbite-svelte.com/docs/pages/introduction), [Icon sets](https://www.svgrepo.com/collections)
 
 ### 🖼️ Sreenshots
 
