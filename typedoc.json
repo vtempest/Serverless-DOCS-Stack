@@ -19,6 +19,7 @@
   },
   "sort": ["source-order"],
   "searchInDocuments": true,
+  "cname": "sveltestarter.js.org",
   "searchInComments": true,
   "sidebarLinks": {
     "Source Code": "https://github.com/vtempest/Serverless-DOCS-Stack",
