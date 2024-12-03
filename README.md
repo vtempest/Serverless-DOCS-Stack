@@ -1,8 +1,24 @@
-![](https://i.imgur.com/6r83blS.png)
-
-![GitHub Discussions](https://img.shields.io/github/discussions/vtempest/Serverless-DOCS-Stack)![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)![](https://github.com/codespaces/badge.svg)
-
-### 🎮[Live Demo](https://serverless-docs-stack.vtempest.workers.dev)   📑[Files & Functions Docs](https://vtempest.github.io/Serverless-DOCS-Stack/)
+<p align="center">
+    <img width="350px" src="https://i.imgur.com/6r83blS.png">
+</p>
+<p align="center">
+    <a href="https://github.com/vtempest/Serverless-DOCS-Stack/discussions">
+    <img alt="GitHub Discussions"
+        src="https://img.shields.io/github/discussions/vtempest/Serverless-DOCS-Stack">
+    </a>
+    <a href="http://makeapullrequest.com">
+        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+    </a>
+    <a href="https://codespaces.new/vtempest/Serverless-DOCS-Stack">
+    <img src="https://github.com/codespaces/badge.svg" width="150" height="20">
+    </a>
+</p>
+<h3 align="center">
+  <a href="https://serverless-docs-stack.vtempest.workers.dev"> 🎮Live Demo </a>
+</h3>
+<h3 align="center">
+  <a href="https://starterdocs.js.org"> 📑 Files & Functions Docs (starterdocs.js.org)</a>
+</h3>
 
 ### ⚒️ Serverless DOCS Stack: Drizzle OAuth Cloudflare Svelte
 
@@ -35,9 +51,9 @@
 ### ⬇️ Installation
 
 1.  Install prerequisites Node.js or Bun `curl -fsSL https://bun.sh/install | bash`. Optional: Setup shell with dev tools like nvim, fish, system info with [Server-Shell-Setup](https://github.com/vtempest/Server-Shell-Setup)
-2.  Clone to localhost or server `git clone https://github.com/vtempest/Serverless-DOCS-Stack`.  
+2.  Clone to localhost or server `git clone https://github.com/vtempest/svelte-docs-starter`.  
     Optional: Press `.` when on the Github repo page to fork and run in Github Workspaces.
-3.  CD to project directory `cd docs-stack-starter`.
+3.  CD to project directory `cd svelte-docs-starter`.
 4.  Install dependencies `bun install`.
 5.  `mv .env.example .env ; mv wrangler.example.toml wrangler.toml` and set the domain and API keys in `.env`.
 6.  Auth providers, get id/secret from [Google](https://console.cloud.google.com/apis/credentials).
