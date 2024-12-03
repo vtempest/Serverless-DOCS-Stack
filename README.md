@@ -12,11 +12,11 @@
 
 ☁️ [Cloudflare for Svelte](https://developers.cloudflare.com/pages/framework-guides/deploy-a-svelte-site/) - serverless autoscaling API and D1 database, great hosting platform with free tier
 
-🖼️ [SvelteKit](https://github.com/sveltejs/kit) - full stack interface and API routes framework. Many developers prefer [Svelte over React](https://shakuro.com/blog/svelte-vs-react).
+🖼️ [SvelteKit](https://svelte.dev/docs/kit/introduction) \- full stack interface and API routes framework. Many developers prefer [Svelte over React](https://shakuro.com/blog/svelte-vs-react).
 
 ### 🧩 Interface Components
 
-🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) + [Bits UI](https://github.com/huntabyte/bits-ui) + [shadcn-svelte](https://github.com/huntabyte/shadcn-svelte) - popular UI components, with  [lucide](https://github.com/lucide-icons/lucide) - icons and demos like [Sidebar examples](https://next.shadcn-svelte.com/blocks) and [Magic UI Animations](https://animation-svelte.vercel.app/magic)
+🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) + [Bits UI](https://github.com/huntabyte/bits-ui) + [shadcn-svelte](https://github.com/huntabyte/shadcn-svelte) - popular UI components, with  [lucide](https://github.com/lucide-icons/lucide) icons and demos like [Sidebar](https://next.shadcn-svelte.com/blocks) and [Magic UI Animations](https://animation-svelte.vercel.app/magic)
 
 📝 [formsnap](https://github.com/svecosystem/formsnap) + [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) with [zod](https://github.com/colinhacks/zod) validation and [rate-limiting](https://github.com/ciscoheat/sveltekit-rate-limiter) in server memory
 
