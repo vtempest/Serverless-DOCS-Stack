@@ -44,9 +44,14 @@
 
 ⭐ _Extras & Alternatives_: [List of Svelte Libraries](https://github.com/TheComputerM/awesome-svelte#ui-libraries), [Material UI](https://sveltematerialui.com/INSTALL.md), [SkeletonUI](https://www.skeleton.dev/components/app-rail), [Flowbite](https://flowbite-svelte.com/docs/pages/introduction), [Icon sets](https://www.svgrepo.com/collections)
 
+📦Easy to switch in alternative packagages, such as running on AWS, GCE, Azure with Docker. 
+Change Drizzle setup to connect to any db like Supabase, and add popular platform APIs with Lucia.
+
+
 ### 🖼️ Screenshots
 
-![](https://i.imgur.com/jIaL6yP.png)![](https://i.imgur.com/NlkjlWI.png)
+<img width="350px" src="https://i.imgur.com/jIaL6yP.png">
+<img width="350px" src="https://i.imgur.com/NlkjlWI.png">
 
 ### ⬇️ Installation
 
