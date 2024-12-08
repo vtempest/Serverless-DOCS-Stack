@@ -32,7 +32,7 @@ export const users = sqliteTable("users", {
   modifiedAt: integer("modified_at", { mode: "timestamp_ms" }).$onUpdate(
     () => new Date()
   ),
-  settings: text("settings").notNull(),
+  settings: text("settings").default("{}"),
 
 });
 

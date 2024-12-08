@@ -7,7 +7,9 @@
   import LoaderCircle from "lucide-svelte/icons/loader-circle";
   import { settingsProfileFormSchema } from "$lib/middleware/validations";
   import { Separator } from "$components/ui/separator";
-export let data = null;
+
+  let { data, attrs, errors } = $props();
+
 
   const form = superForm(data.form, {
     validators: zodClient(settingsProfileFormSchema),
@@ -29,13 +31,13 @@ export let data = null;
   <Separator />
   <form class="flex flex-col gap-2" method="post" use:enhance>
     <Form.Field {form} name="username" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>Username</Form.Label>
-        <Input {...attrs} type="text" bind:value={$formData.username} />
+        <Input type="text" bind:value={$formData.username} />
       </Form.Control>
       <Form.Description>This is your public display name. You can only change this once every 30 days.</Form.Description>
-      <Form.FieldErrors let:errors class="h-4 text-xs">
-        {#if errors[0]}
+      <Form.FieldErrors  class="h-4 text-xs">
+        {#if errors?.[0]}
           Invalid username
         {/if}
       </Form.FieldErrors>

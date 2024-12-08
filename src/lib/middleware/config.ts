@@ -1,16 +1,14 @@
 // DOMAIN SPECIFIC CUSTOMIZATION
 
-export const PUBLIC_DOMAIN = "qwksearch.com",
-  APP_NAME = "QwkSearch",
+export const PUBLIC_DOMAIN = "starterdocs.vtempest.workers.dev",
+  APP_NAME = "Svelte Starter DOCS",
   APP_EMAIL = "support@" + PUBLIC_DOMAIN,
-  APP_ICON = "/icons/qwksearch-icon.svg",
+  APP_ICON = "/icons/apple-touch-icon.png",
   GOOGLE_ANALYTICS = "G-E5TZ32BZDF",
   COOKIE_NAME = "site",
-  searxngDomain = "https://search." + PUBLIC_DOMAIN,
-  proxy = "https://proxy." + PUBLIC_DOMAIN + "/?url=",
   FOOTER_LINKS = [
-    { url: "/pricing", text: "Pricing" },
-    { url: "https://www.linkedin.com/company/qwksearch/posts/", text: "Blog" },
+    { url: "https://starterdocs.js.org", text: "Docs" },
+    { url: "https://github.com/vtempest/Svelte-Starter-DOCS/", text: "Github" },
     { url: "https://discord.gg/SJdBqBz3tV", text: "Support" },
     { url: "/legal/privacy", text: "Privacy" },
     { url: "/legal/terms", text: "Terms" },

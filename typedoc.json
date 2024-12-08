@@ -9,6 +9,7 @@
     "includeFolders": true
   },
   "commentStyle":"all",
+  "cname": "starterdocs.js.org",
   "skipErrorChecking": true,
   "hideGenerator": true,
   "jsDocCompatibility": {

@@ -2,22 +2,29 @@
   import { Button } from "$components/ui/button";
   import type { User } from "lucia";
   import { enhance } from "$app/forms";
-  import { route } from "$lib/ROUTES";
+  import { APP_NAME } from "$lib/middleware/config";
   
-  import { ThemeSwitcher, Logo } from "$components/layout";
+  import  ThemeSwitcher from "./theme-switcher.svelte";
 
   type Props = { user: User | null };
 
   const navLinks = [
-    { name: "Home", href: route("/") },
+    { name: "Home", href: ("/") },
   ]
 
   let { user }: Props = $props();
+  let hidden = false;
 </script>
 
 <header class="border-b border-gray-500 py-4 dark:border-gray-600">
   <nav class="flex justify-between">
-    <Logo href={route("/")} hidden={true} />
+
+
+        
+    <a href="/" class="flex items-center gap-3">
+      <img src="/icons/apple-touch-icon.png" class="size-9" alt={`${APP_NAME} logo`} />
+      <span class="text-xl font-bold text-black dark:text-white" class:hidden>{APP_NAME}</span>
+    </a>
 
     <ul class="hidden lg:flex lg:flex-row lg:font-medium">
       <!-- {#each navLinks as { name, href }}
@@ -35,16 +42,16 @@
         <form method="post" action="/auth/logout" use:enhance>
           <Button type="submit" variant="outline">{"Logout"}</Button>
         </form>
-        <Button href={route("/app/dashboard")}>
-          {"Dashboard"}
-          <span class="sr-only">{"Dashboard"}</span>
+        <Button href={("/app/settings")}>
+          {"Settings"}
+          <span class="sr-only">{"Settings"}</span>
         </Button>
       {:else}
-        <Button href={route("/auth/login")} variant="secondary">
+        <Button href={("/auth/login")} variant="secondary">
           {"Login"}
           <span class="sr-only">{"Login"}</span>
         </Button>
-        <Button href={route("/auth/register")}>
+        <Button href={("/auth/register")}>
           {"Register"}
           <span class="sr-only">{"Register"}</span>
         </Button>

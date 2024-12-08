@@ -9,6 +9,10 @@ import { destroySession, setNewSession } from "$lib/middleware/sessions";
 
 import { logger } from "$lib/middleware/logger";
 
+
+/**
+ * Add database to each route controller at locals.db
+ */
 export const database = async ({ event, resolve }) => {
   event.locals.db = drizzle(event.platform?.env.DB, { schema });
 
@@ -122,9 +126,10 @@ export const handleError = ({ status, message, error }) => {
   if (status !== 404) {
     logger.error(error);
   }
+  return { message}
 
   // do not return sensitive data here as it will be sent to the client
-  return { error };
+  // return { error };
 };
 
 export const handle = sequence(database, authentication, authorization);

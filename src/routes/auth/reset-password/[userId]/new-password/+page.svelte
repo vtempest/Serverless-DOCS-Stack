@@ -18,7 +18,7 @@
   import { Button } from "$components/ui/button";
   
 
-  let { data } = $props();
+  let { data, attrs} = $props();
 
   let isPasswordFieldFocused = $state(false);
   let revealPassword = $state(false);
@@ -66,7 +66,7 @@
   <div class="text-muted-foreground">{"Now you can update your password."}</div>
   <form class="flex flex-col gap-3" method="post" use:enhance>
     <Form.Field {form} name="password" class="relative space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{"Password"}</Form.Label>
         <Input
           {...attrs}
@@ -125,20 +125,20 @@
 
         {/if}
       </Form.Control>
-      <Form.FieldErrors let:errors class="h-4 text-xs">
-        {#if errors[0]}
-          {errors[0]}
+      <Form.FieldErrors  class="h-4 text-xs">
+        {#if errors?.[0]}
+          {errors?.[0]}
         {/if}
       </Form.FieldErrors>
     </Form.Field>
     <Form.Field {form} name="passwordConfirm" class="mt-2 space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{ "Password confirm"}</Form.Label>
         <Input {...attrs} type="password" bind:value={$formData.passwordConfirm} />
       </Form.Control>
-      <Form.FieldErrors let:errors class="h-4 text-xs">
-        {#if errors[0]}
-          {errors[0]}
+      <Form.FieldErrors  class="h-4 text-xs">
+        {#if errors?.[0]}
+          {errors?.[0]}
         {/if}
       </Form.FieldErrors>
     </Form.Field>

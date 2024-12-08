@@ -4,4 +4,5 @@
   import "../app.pcss";
 </script>
   
-{@render children?.()}
+<!-- {@render children?.()} -->
+<slot />

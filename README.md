@@ -2,25 +2,25 @@
     <img width="350px" src="https://i.imgur.com/6r83blS.png">
 </p>
 <p align="center">
-    <a href="https://github.com/vtempest/Serverless-DOCS-Stack/discussions">
+    <a href="https://github.com/vtempest/Svelte-Starter-DOCS/discussions">
     <img alt="GitHub Discussions"
-        src="https://img.shields.io/github/discussions/vtempest/Serverless-DOCS-Stack">
+        src="https://img.shields.io/github/discussions/vtempest/Svelte-Starter-DOCS">
     </a>
     <a href="http://makeapullrequest.com">
         <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
     </a>
-    <a href="https://codespaces.new/vtempest/Serverless-DOCS-Stack">
+    <a href="https://codespaces.new/vtempest/Svelte-Starter-DOCS">
     <img src="https://github.com/codespaces/badge.svg" width="150" height="20">
     </a>
 </p>
 <h3 align="center">
-  <a href="https://serverless-docs-stack.vtempest.workers.dev"> 🎮Live Demo </a>
+  <a href="https://starterdocs.vtempest.workers.dev"> 🎮Live Demo </a>
 </h3>
 <h3 align="center">
   <a href="https://starterdocs.js.org"> 📑 Files & Functions Docs (starterdocs.js.org)</a>
 </h3>
 
-### ⚒️ Serverless DOCS Stack: Drizzle OAuth Cloudflare Svelte
+### ⚒️ Svelte Serverless Starter DOCS: Drizzle OAuth Cloudflare Svelte
 
 📚 [Drizzle ORM](https://orm.drizzle.team/kit-docs/quick) - lightweight ORM compatible with Cloudflare D1 and drizzle-kit to manage schema migrations
 
@@ -36,22 +36,21 @@
 
 📝 [formsnap](https://github.com/svecosystem/formsnap) + [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) with [zod](https://github.com/colinhacks/zod) validation and [rate-limiting](https://github.com/ciscoheat/sveltekit-rate-limiter) in server memory
 
-🛣️ [vite-plugin-kit-routes](https://github.com/jycouet/kitql/tree/main/packages/vite-plugin-kit-routes) - url routes
+🌲 [pino](https://github.com/pinojs/pino) - error logs
 
-🌲 [pino](https://github.com/pinojs/pino) - logging
-
-✅ [Vitest](https://vitest.dev/guide/ui) - unit testing web UI
+✅ [Vitest](https://vitest.dev/guide/ui) - unit testing UI
 
 ⭐ _Extras & Alternatives_: [List of Svelte Libraries](https://github.com/TheComputerM/awesome-svelte#ui-libraries), [Material UI](https://sveltematerialui.com/INSTALL.md), [SkeletonUI](https://www.skeleton.dev/components/app-rail), [Flowbite](https://flowbite-svelte.com/docs/pages/introduction), [Icon sets](https://www.svgrepo.com/collections)
 
-📦Easy to switch in alternative packagages, such as running on AWS, GCE, Azure with Docker. 
+📦 Easy to switch in alternatives: Such as running on AWS, GCE, Azure instead of Cloudflare. 
 Change Drizzle setup to connect to any db like Supabase, and add popular platform APIs with Lucia.
 
 
 ### 🖼️ Screenshots
+<p align="center">
+    <img width="350px" src="https://i.imgur.com/jIaL6yP.png"><img width="350px" src="https://i.imgur.com/NlkjlWI.png">
+</p>
 
-<img width="350px" src="https://i.imgur.com/jIaL6yP.png">
-<img width="350px" src="https://i.imgur.com/NlkjlWI.png">
 
 ### ⬇️ Installation
 
@@ -66,7 +65,7 @@ Change Drizzle setup to connect to any db like Supabase, and add popular platfor
 8.  Set redirect `http://localhost:5173/auth/oauth/google/callback` or `https://api.domain.com/auth/oauth/google/callback`.
 9.  Optional: For email auth, get API from [Resend](https://resend.com/api-keys) mailer and verify domain.
 10.  Log in with your Cloudflare account by running: `bunx wrangler login`.
-11.  Create your D1 database via dashboard or with `bunx wrangler d1 create my-db-prod`.
+11.  Create your D1 database via dashboard or with `bunx wrangler d1 create serverless-docs-db` or your custom db name.
 12.  Copy the console output database\_name and database\_id.
 13.  Go to `wrangler.toml` and change `database_name` and `database_id`.
 14.  Go to `drizzle.config.ts` and change db name in `dbName`.

@@ -10,7 +10,7 @@
   import { enhance } from "$app/forms";
   
 
-  let { data } = $props();
+  let { data, attrs, errors } = $props();
 
   const form = superForm(data.form, {
     validators: zodClient(verifyEmailFormSchema),
@@ -34,7 +34,7 @@
   </div>
   <form class="flex flex-col" method="post" action={("confirm /auth/verify-email")} use:enhanceConfirmForm>
     <Form.Field {form} name="token" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{ "Token"}</Form.Label>
         <Input {...attrs} type="text" bind:value={$formData.token} />
       </Form.Control>

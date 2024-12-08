@@ -12,7 +12,7 @@
 
   import { Input } from "$components/ui/input";
   import { Button } from "$components/ui/button";
-    import * as DropdownMenu from "$components/ui/dropdown-menu";
+  import * as DropdownMenu from "$components/ui/dropdown-menu";
   import * as Avatar from "$components/ui/avatar";
 
   import { enhance } from "$app/forms";
@@ -43,8 +43,8 @@
 
 
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild let:builder>
-        <Button variant="ghost" builders={[builder]} class="relative size-10 rounded-full">
+      <DropdownMenu.Trigger asChild>
+        <Button variant="ghost" class="relative size-10 rounded-full">
           <Avatar.Root class="size-10">
             <!-- <Avatar.Image src={user.avatarUrl} alt={`${user.name} avatar`} /> -->
             <Avatar.Fallback>
@@ -103,4 +103,5 @@
 
 <section>
   {@render children?.()}
+   <!-- <slot /> -->
 </section>

@@ -7,8 +7,9 @@
   import LoaderCircle from "lucide-svelte/icons/loader-circle";
   import { settingsNotificationsFormSchema } from "$lib/middleware/validations";
   import { Separator } from "$components/ui/separator";
-export let data = null;
 
+  let { data, attrs, errors } = $props();
+  
   const form = superForm(data.form, {
     validators: zodClient(settingsNotificationsFormSchema),
     delayMs: 500,
@@ -29,12 +30,12 @@ export let data = null;
   <Separator />
   <form class="flex flex-col gap-2" method="post" use:enhance>
     <Form.Field {form} name="name" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>Name</Form.Label>
         <Input {...attrs} type="text" bind:value={$formData.name} />
       </Form.Control>
-      <Form.FieldErrors let:errors class="h-4 text-xs">
-        {#if errors[0]}
+      <Form.FieldErrors  class="h-4 text-xs">
+        {#if errors?.[0]}
           Invalid name
         {/if}
       </Form.FieldErrors>

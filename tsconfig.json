@@ -2,7 +2,6 @@
   "extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {},
     "strict": false,
     "allowImportingTsExtensions": true,
     "target": "ESNext",
@@ -12,13 +11,18 @@
     "checkJs": false,
     "isolatedModules": false,
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "$lib": ["./src/lib/*"],
+      "$lib/*": ["./src/lib/*"],
+      "$components": ["./src/lib/components/*"],
+      "$components/*": ["./src/lib/components/*"],
+    }
   },
   "include": [
     "./src/**/*",
-    "./src/lib/ROUTES.ts",
     "./src/app.html"
-, "../debate-ai/typesense", "../debate-ai/Videos", "../debate-ai/Flow", "../debate-ai/SearchEvidence", "../debate-ai/Videos"  ],
+  ],
   "exclude": [
     "node_modules",
     "dist"

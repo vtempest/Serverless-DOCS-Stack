@@ -1,8 +1,5 @@
 <script lang="ts">
-  import { route } from "$lib/ROUTES";
   // import { socials, sections } from "$lib/middleware/config";
-  
-  import { Logo } from "$components/layout";
 
   let currentYear = $state("");
 

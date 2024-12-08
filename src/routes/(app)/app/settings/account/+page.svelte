@@ -7,8 +7,8 @@
   import * as flashModule from "sveltekit-flash-message/client";
   import LoaderCircle from "lucide-svelte/icons/loader-circle";
   import { settingsAccountFormSchema } from "$lib/middleware/validations";
-  export let data = null;
 
+  let { data, attrs, errors } = $props();
 
   const form = superForm(data.form, {
     validators: zodClient(settingsAccountFormSchema),
@@ -30,12 +30,12 @@
   <Separator />
   <form method="POST" class="space-y-8" use:enhance>
     <Form.Field {form} name="name" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>Name</Form.Label>
         <Input {...attrs} type="text" bind:value={$formData.name} />
       </Form.Control>
-      <Form.FieldErrors let:errors class="h-4 text-xs">
-        {#if errors[0]}
+      <Form.FieldErrors  class="h-4 text-xs">
+        {#if errors?.[0]}
           Invalid name
         {/if}
       </Form.FieldErrors>

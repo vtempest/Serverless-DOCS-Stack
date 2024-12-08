@@ -9,8 +9,8 @@
   import LoaderCircle from "lucide-svelte/icons/loader-circle";
   import { enhance } from "$app/forms";
   
+  let { data, attrs, errors } = $props();
 
-  let { data } = $props();
 
   const form = superForm(data.form, {
     validators: zodClient(changeEmailFormSchemaSecondStep),
@@ -35,7 +35,7 @@
   </div>
   <form class="flex flex-col" method="post" action={("confirm /auth/change-email/confirm")} use:enhanceConfirmForm>
     <Form.Field {form} name="token" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{ "Token"}</Form.Label>
         <Input {...attrs} type="text" bind:value={$formData.token} />
       </Form.Control>

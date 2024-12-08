@@ -9,7 +9,7 @@
   import LoaderCircle from "lucide-svelte/icons/loader-circle";
   
 
-  let { data } = $props();
+  let { data, attrs, errors } = $props();
 
   const form = superForm(data.form, {
     validators: zodClient(resetPasswordFormSchemaFirstStep),
@@ -31,7 +31,7 @@
   <div class="text-muted-foreground">{"Please insert your email to receive a token to reset your password."}</div>
   <form class="flex flex-col" method="post" use:enhance>
     <Form.Field {form} name="email" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{"Email" }</Form.Label>
         <Input {...attrs} type="text" bind:value={$formData.email} />
       </Form.Control>

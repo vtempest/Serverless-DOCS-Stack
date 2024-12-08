@@ -18,7 +18,7 @@
   
 
 
-  let { data } = $props();
+  let { data, attrs, errors } = $props();
 
   // TODO rename this
   let isPasswordFieldFocused = $state(false);
@@ -62,7 +62,7 @@
 </Card.Header>
 <Card.Content class="grid gap-4">
   <div class="grid ">
-    <Button variant="outline" href={("GET /auth/oauth/google")}>
+    <Button variant="outline" href="/auth/oauth/google">
       { "Google"}
     </Button>
   </div>
@@ -76,21 +76,21 @@
   </div>
   <form class="flex flex-col gap-2" method="post" use:enhance>
     <Form.Field {form} name="name" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{"Name"}</Form.Label>
         <Input {...attrs} type="name" bind:value={$formData.name} />
       </Form.Control>
       <Form.FieldErrors class="h-4 text-xs" />
     </Form.Field>
     <Form.Field {form} name="email" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{"Email" }</Form.Label>
         <Input {...attrs} type="email" bind:value={$formData.email} />
       </Form.Control>
       <Form.FieldErrors class="h-4 text-xs" />
     </Form.Field>
     <Form.Field {form} name="password" class="relative mb-2 space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{"Password"}</Form.Label>
         <Input
           {...attrs}
@@ -151,20 +151,20 @@
 
         {/if}
       </Form.Control>
-      <Form.FieldErrors let:errors class="h-4 text-xs">
-        {#if errors[0]}
-          {errors[0]}
+      <Form.FieldErrors  class="h-4 text-xs">
+        {#if errors?.[0]}
+          {errors?.[0]}
         {/if}
       </Form.FieldErrors>
     </Form.Field>
     <Form.Field {form} name="passwordConfirm" class="space-y-1">
-      <Form.Control let:attrs>
+      <Form.Control >
         <Form.Label>{ "Password confirm"}</Form.Label>
         <Input {...attrs} type="password" bind:value={$formData.passwordConfirm} />
       </Form.Control>
-      <Form.FieldErrors let:errors class="h-4 text-xs">
-        {#if errors[0]}
-          {errors[0]}
+      <Form.FieldErrors  class="h-4 text-xs">
+        {#if errors?.[0]}
+          {errors?.[0]}
         {/if}
       </Form.FieldErrors>
     </Form.Field>
