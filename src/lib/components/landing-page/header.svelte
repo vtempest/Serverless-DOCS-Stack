@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Button } from "$components/ui/button";
-  import { navLinks } from "$configs/landing/header-links";
   import type { User } from "lucia";
   import { enhance } from "$app/forms";
   import { route } from "$lib/ROUTES";
@@ -8,6 +7,10 @@
   import { ThemeSwitcher, Logo } from "$components/layout";
 
   type Props = { user: User | null };
+
+  const navLinks = [
+    { name: "Home", href: route("/") },
+  ]
 
   let { user }: Props = $props();
 </script>
@@ -17,14 +20,14 @@
     <Logo href={route("/")} hidden={true} />
 
     <ul class="hidden lg:flex lg:flex-row lg:font-medium">
-      {#each navLinks as { name, href }}
+      <!-- {#each navLinks as { name, href }}
         <li>
           <Button {href} variant="link" class="text-md text-black dark:text-white">
             {name}
             <span class="sr-only">{name}</span>
           </Button>
         </li>
-      {/each}
+      {/each} -->
     </ul>
     <div class="flex gap-2">
       <ThemeSwitcher />

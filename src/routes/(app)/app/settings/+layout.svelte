@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Separator } from "$components/ui/separator";
-  import { SidebarSettingsNav } from "$components/app";
 
   const sidebarNavItems = [
     {
@@ -17,7 +16,6 @@
     }
   ];
 
-  let { children } = $props();
 </script>
 
 <div class="container mt-8 hidden space-y-6 rounded-lg border p-10 pb-16 md:block">
@@ -27,11 +25,9 @@
   </div>
   <Separator class="my-6" />
   <div class="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-    <aside class="-mx-4 lg:w-1/5">
-      <SidebarSettingsNav items={sidebarNavItems} />
-    </aside>
     <div class="flex-1 lg:max-w-2xl">
-      {@render children()}
+      <!-- {@render children()} -->
+       <slot></slot>
     </div>
   </div>
 </div>

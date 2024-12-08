@@ -19,10 +19,9 @@
   },
   "sort": ["source-order"],
   "searchInDocuments": true,
-  "cname": "starterdocs.js.org",
   "searchInComments": true,
   "sidebarLinks": {
-    "Source Code": "https://github.com/vtempest/Serverless-DOCS-Stack",
+    "Source Code": "https://github.com/vtempest/",
   },
   
   "excludePrivate": true

@@ -1,6 +1,5 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import { prefersReducedMotion } from "$stores/reduced-motion.store";
   import type { Snippet } from "svelte";
 
   type Props = {
@@ -21,11 +20,7 @@
 </script>
 
 {#key key}
-  {#if $prefersReducedMotion}
-    {@render children()}
-  {:else}
     <div in:fade={{ delay: duration, duration }} out:fade={{ duration }}>
       {@render children()}
     </div>
-  {/if}
 {/key}

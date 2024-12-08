@@ -2,7 +2,7 @@
   import ChevronRight from "lucide-svelte/icons/chevron-right";
   import { Button } from "$components/ui/button";
   import { route } from "$lib/ROUTES";
-  import { APP_NAME } from "$configs/general";
+  import { APP_NAME } from "$lib/middleware/config";
 
 </script>
 

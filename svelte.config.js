@@ -3,23 +3,35 @@ import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+  onwarn: (warning, handler) => {
+    if (warning.code) {
+      return;
+    }
+    handler(warning); // Handle other warnings normally
+  },
   // Consult https://kit.svelte.dev/docs/integrations#preprocessors
   // for more information about preprocessors
-  preprocess: vitePreprocess(),
+  server: {
+    proxy: {
+  
+    },
+  },
+   preprocess: vitePreprocess(),
   kit: {
 		adapter: adapter({
-	  config: 'wrangler.toml',
-	  platformProxy: {
-		persist: './static'
-	  }
+      config: 'wrangler.toml',
+      platformProxy: {
+        persist: './static'
+      }
 		}),
     alias: {
+      $lib:"src/lib",
       $components: "src/lib/components",
       $configs: "src/lib/configs",
       $constants: "src/lib/constants",
       $stores: "src/lib/stores",
-      $utils: "src/lib/utils",
       $validations: "src/lib/validations",
+      "$ai-research-agent": "../",
     }
   }
 };

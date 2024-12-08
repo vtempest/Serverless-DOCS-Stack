@@ -1,15 +1,15 @@
 import { message, superValidate } from "sveltekit-superforms";
 import type { PageServerLoad } from "./$types";
 import { zod } from "sveltekit-superforms/adapters";
-import { settingsProfileFormSchema, type SettingsProfileFormSchema } from "$validations/app/settings";
+import { settingsProfileFormSchema, type SettingsProfileFormSchema } from "$lib/middleware/validations";
 import { fail, type Actions } from "@sveltejs/kit";
-import { FLASH_MESSAGE_STATUS } from "$configs/general";
-import { verifyRateLimiter } from "$lib/server/security";
-import { profileSettingsLimiter } from "$configs/rate-limiters/app";
-import { logger } from "$lib/logger";
+
+
+import { verifyRateLimiter } from "$lib/middleware/ratelimits";
+import { profileSettingsLimiter } from "$lib/middleware/ratelimits";
+import { logger } from "$lib/middleware/logger";
 import { redirect, setFlash } from "sveltekit-flash-message/server";
-import { route } from "$lib/ROUTES";
-import { getUserByUsername, updateUserById } from "$lib/server/db/users";
+import { getUserByUsername, updateUserById } from "$lib/db/users";
 
 
 export const load: PageServerLoad = async ({ locals: { user } }) => {
@@ -23,7 +23,7 @@ export const load: PageServerLoad = async ({ locals: { user } }) => {
 export const actions: Actions = {
   default: async (event) => {
     const { request, locals, cookies } = event;
-    const flashMessage = { status: FLASH_MESSAGE_STATUS.ERROR, text: "" };
+    const flashMessage = { status: "error", text: "" };
 
     const minutes = await verifyRateLimiter(event, profileSettingsLimiter);
     if (minutes) {
@@ -61,9 +61,9 @@ export const actions: Actions = {
       return message(form, flashMessage, { status: 400 });
     }
 
-    flashMessage.status = FLASH_MESSAGE_STATUS.SUCCESS;
+    flashMessage.status = "success";
     flashMessage.text = "Profile updated successfully";
 
-    redirect(route("/app/settings/profile"), flashMessage, cookies);
+    redirect(("/app/settings/profile"), flashMessage, cookies);
   }
 };

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { route } from "$lib/ROUTES";
-  import { socials, sections } from "$configs/landing/footer-links";
+  // import { socials, sections } from "$lib/middleware/config";
   
   import { Logo } from "$components/layout";
 
@@ -17,7 +17,7 @@
     <div class="mb-6 md:mb-0">
     </div>
     <div class="grid grid-cols-2 gap-8 sm:grid-cols-2 sm:gap-6">
-      {#each sections as { name, data }}
+      <!-- {#each sections as { name, data }}
         <div>
           <h2 class="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">{name}</h2>
           <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
@@ -28,7 +28,7 @@
             {/each}
           </ul>
         </div>
-      {/each}
+      {/each} -->
     </div>
   </div>
   <hr class="my-6 border-gray-200 dark:border-gray-700 lg:my-8" />

@@ -1,14 +1,8 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import fs from "node:fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import fs from "fs";
 import type { Config } from "drizzle-kit";
 
-/**
- * This is a temporary fix because of a drizzle-kit bug
- * https://github.com/drizzle-team/drizzle-kit-mirror/issues/321
- * So we can use better-sqlite3 driver instead of D1
- * You can delete this code and "better-sqlite3" dependency when this issue will be fixed
- */
 const getLocalDb = () => {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const dbPath = path.resolve(__dirname, "./.wrangler/state/v3/d1/miniflare-D1DatabaseObject");
@@ -31,14 +25,27 @@ if (isDev) {
 } else {
   dbCredentials = {
     wranglerConfigPath: "wrangler.toml",
-    dbName: "my-db-prod"
+    dbName: "serverless-docs-db"
   };
 }
 
 export default {
-  schema: "src/lib/server/db/schema.ts",
+  schema: "src/lib/db/schema.ts",
   out: "migrations",
   dialect: "sqlite",
-  driver: "libsql",
+  driver: "d1-http",
   dbCredentials
 } satisfies Config;
+
+
+
+/**
+ Create your D1 database via dashboard or with bunx wrangler d1 create my-db-prod.
+Copy the console output database_name and database_id.
+Go to wrangler.toml and change database_name and database_id.
+Go to drizzle.config.ts and change db name in dbName.
+Go to package.json and change db name in db:push:* and db:backup:prod.
+Generate and migrate the schema to dev or prod db: 
+bun run db:migrate; bun run db:push:dev; bun run db:push:prod.
+
+ */

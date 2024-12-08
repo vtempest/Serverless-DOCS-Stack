@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { APP_NAME } from "$configs/general";
+  import { APP_NAME } from "$lib/middleware/config";
 
   type Props = {
     href: string;

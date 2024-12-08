@@ -6,9 +6,9 @@
   import { zodClient } from "sveltekit-superforms/adapters";
   import * as flashModule from "sveltekit-flash-message/client";
   import LoaderCircle from "lucide-svelte/icons/loader-circle";
-  import { settingsAccountFormSchema } from "$validations/app/settings";
+  import { settingsAccountFormSchema } from "$lib/middleware/validations";
+  export let data = null;
 
-  let { data } = $props();
 
   const form = superForm(data.form, {
     validators: zodClient(settingsAccountFormSchema),

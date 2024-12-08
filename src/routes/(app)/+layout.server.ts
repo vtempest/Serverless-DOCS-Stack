@@ -1,5 +1,4 @@
-import type { LayoutServerLoad } from "./$types";
-
-export const load = (async ({ locals: { user } }) => {
+// pass the user object into $props
+export const load = async ({ locals: { user } }) => {
   return { user };
-}) satisfies LayoutServerLoad;
+};

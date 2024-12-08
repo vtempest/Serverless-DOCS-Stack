@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Features, Hero } from "$components/landing-page";
+  import {  Hero } from "$components/landing-page";
 </script>
 
 <Hero />
